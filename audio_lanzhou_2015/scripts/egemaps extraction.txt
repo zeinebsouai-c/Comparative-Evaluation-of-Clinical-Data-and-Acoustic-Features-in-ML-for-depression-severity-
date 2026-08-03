@@ -1,0 +1,22 @@
+# Paths
+$smile = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\tools\opensmile-3.0-win-x64\bin\SMILExtract.exe"
+$cfg   = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\tools\opensmile-3.0-win-x64\config\egemaps\v01a\eGeMAPSv01a.conf"
+$root  = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\audio_lanzhou_2015_resampled"
+
+# Every resampled WAV under each subject folder
+$wavs = Get-ChildItem -Path $root -Recurse -Filter *_resampled.wav
+
+$done = 0; $skipped = 0; $failed = 0
+foreach ($wav in $wavs) {
+    $outDir = Join-Path $wav.DirectoryName "egemaps"
+    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+
+    $outCsv = Join-Path $outDir ($wav.BaseName + "_egemaps.csv")
+    if (Test-Path $outCsv) { $skipped++; continue }   # resumable
+
+    & $smile -C $cfg -I $wav.FullName -O $outCsv -l 1   # -l 1 = quieter logging
+    if ($LASTEXITCODE -eq 0) { $done++ }
+    else { Write-Warning "Failed: $($wav.FullName)"; $failed++ }
+}
+
+Write-Host "Extracted $done, skipped $skipped existing, $failed failed."

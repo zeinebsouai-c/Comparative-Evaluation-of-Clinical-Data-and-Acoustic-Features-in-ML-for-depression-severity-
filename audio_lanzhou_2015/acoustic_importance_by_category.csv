@@ -1,0 +1,7 @@
+category,n_features,mdi_sum,group_perm_mean,group_perm_std,mdi_%
+Spectral,33,0.5861,0.2337,0.2348,58.6
+Voice quality,10,0.1225,0.1183,0.0549,12.3
+Pitch,2,0.0221,0.0059,0.0089,2.2
+Timing/Pauses,6,0.0183,-0.007,0.0091,1.8
+Loudness/Energy,3,0.0726,-0.0113,0.0382,7.3
+Formants,18,0.1783,-0.0365,0.0586,17.8

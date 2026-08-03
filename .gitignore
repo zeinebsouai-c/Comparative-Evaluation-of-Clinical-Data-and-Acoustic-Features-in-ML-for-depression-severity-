@@ -1,0 +1,31 @@
+# raw + derived audio
+*.wav
+*.mp3
+*.flac
+*.m4a
+
+# subject folders and derived audio sets
+audio_lanzhou_2015/audio_lanzhou_2015_resampled/
+audio_lanzhou_2015/audio_lanzhou_2015_noisy/
+audio_lanzhou_2015/0*/
+
+# large binaries
+*.edf
+*.bdf
+*.mat
+*.npy
+*.npz
+*.pkl
+*.h5
+*.hdf5
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# os
+.DS_Store
+Thumbs.db

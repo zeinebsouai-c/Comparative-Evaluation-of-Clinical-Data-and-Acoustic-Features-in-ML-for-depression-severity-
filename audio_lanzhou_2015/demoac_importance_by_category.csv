@@ -1,0 +1,10 @@
+category,n_features,mdi_sum,group_perm_mean,group_perm_std
+Spectral,33,0.5537,0.2678,0.1871
+Voice quality,10,0.1308,0.1184,0.0655
+education_years,1,0.034,0.0697,0.0299
+Loudness/Energy,3,0.0508,0.0046,0.0278
+Pitch,2,0.018,0.0035,0.0087
+age,1,0.0159,0.0025,0.0061
+gender,1,0.0003,-0.0001,0.0008
+Timing/Pauses,6,0.0128,-0.0124,0.0106
+Formants,18,0.1836,-0.0307,0.0548

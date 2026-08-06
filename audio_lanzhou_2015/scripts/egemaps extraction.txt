@@ -1,22 +1,12 @@
-# Paths
-$smile = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\tools\opensmile-3.0-win-x64\bin\SMILExtract.exe"
-$cfg   = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\tools\opensmile-3.0-win-x64\config\egemaps\v01a\eGeMAPSv01a.conf"
-$root  = "C:\Users\zeine\OneDrive\Documents\bachelor thesis\data\audio_lanzhou_2015\audio_lanzhou_2015\audio_lanzhou_2015_resampled"
+The eGeMAPS extraction command used to live here as a copy-paste snippet with
+absolute paths. It is now a runnable, path-independent script:
 
-# Every resampled WAV under each subject folder
-$wavs = Get-ChildItem -Path $root -Recurse -Filter *_resampled.wav
+    scripts/extract_egemaps.ps1         clean resampled WAVs -> egemaps_features.csv
+    scripts/extract_noisy_egemaps.ps1   noisy WAVs           -> egemaps_features_noisy.csv
 
-$done = 0; $skipped = 0; $failed = 0
-foreach ($wav in $wavs) {
-    $outDir = Join-Path $wav.DirectoryName "egemaps"
-    New-Item -ItemType Directory -Force -Path $outDir | Out-Null
+Run either from anywhere:
 
-    $outCsv = Join-Path $outDir ($wav.BaseName + "_egemaps.csv")
-    if (Test-Path $outCsv) { $skipped++; continue }   # resumable
+    & "<repo>/audio_lanzhou_2015/scripts/extract_egemaps.ps1"
 
-    & $smile -C $cfg -I $wav.FullName -O $outCsv -l 1   # -l 1 = quieter logging
-    if ($LASTEXITCODE -eq 0) { $done++ }
-    else { Write-Warning "Failed: $($wav.FullName)"; $failed++ }
-}
-
-Write-Host "Extracted $done, skipped $skipped existing, $failed failed."
+Both derive openSMILE and the audio root from the script's own location, and
+honour the $env:OPENSMILE_ROOT / $env:MODMA_DATA_DIR overrides.

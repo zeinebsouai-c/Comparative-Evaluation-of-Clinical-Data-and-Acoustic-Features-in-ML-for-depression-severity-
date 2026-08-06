@@ -17,10 +17,12 @@ from pathlib import Path
 
 import pandas as pd
 
-# Directory that contains the subject-id folders (this script's own folder).
-BASE_DIR = Path(__file__).resolve().parent
-OUTPUT_CSV = BASE_DIR / "wav_inventory.csv"
-SUBJECTS_XLSX = BASE_DIR / "subjects_information_audio_lanzhou_2015.xlsx"
+from project_paths import DATA_DIR, SUBJECTS_XLSX, WAV_INVENTORY, require
+
+# Directory that contains the subject-id folders. This script lives in
+# <data_root>/scripts/, so the subject folders are one level up (DATA_DIR).
+BASE_DIR = DATA_DIR
+OUTPUT_CSV = WAV_INVENTORY
 
 
 def load_subject_metadata() -> dict:
@@ -29,7 +31,10 @@ def load_subject_metadata() -> dict:
     Folder names are zero-padded (e.g. '02010001') while the spreadsheet stores
     the id as an integer (2010001), so we key the map on the int value.
     """
-    df = pd.read_excel(SUBJECTS_XLSX, usecols=["subject id", "type", "PHQ-9"])
+    df = pd.read_excel(
+        require(SUBJECTS_XLSX, "Place the MODMA metadata sheet in the data root."),
+        usecols=["subject id", "type", "PHQ-9"],
+    )
     df = df.dropna(subset=["subject id"])
     meta = {}
     for _, row in df.iterrows():

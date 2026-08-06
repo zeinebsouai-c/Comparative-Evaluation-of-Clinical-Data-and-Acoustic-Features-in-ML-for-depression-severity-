@@ -1,25 +1,40 @@
 """
 project_config.py: single source of truth for the whole thesis project.
 
-Import at the top of EVERY analysis notebook (training, cv, robustness,
-interpretability, error analysis):
+Paths live in project_paths.py and are re-exported here, so importing this
+module is all an analysis notebook needs. Import at the top of EVERY analysis
+notebook (training, cv, robustness, interpretability, error analysis), after the
+portable bootstrap cell that puts scripts/ on sys.path:
 
     import sys
     from pathlib import Path
-    _here = Path.cwd()
-    sys.path.insert(0, str(_here if (_here / "project_config.py").exists() else _here / "scripts"))
+
+    def _find_scripts_dir():
+        start = Path.cwd().resolve()
+        for base in (start, *start.parents):
+            for cand in (base / "scripts", base,
+                         *sorted(base.glob("*/scripts")), *sorted(base.glob("*/*/scripts"))):
+                if (cand / "project_paths.py").is_file():
+                    return cand
+        raise FileNotFoundError("scripts/project_paths.py not found ...")
+
+    sys.path.insert(0, str(_find_scripts_dir()))
     from project_config import *
 
     model_df = load_model_df()
     y = model_df["phq9"]
 
-Then use the CONSTANTS below everywhere. Never redefine `acoustic` inline again.
+Then use the CONSTANTS below everywhere. Never redefine `acoustic` inline again,
+and never write an absolute path into a notebook.
 """
 
 from pathlib import Path
 import re
 import numpy as np
 import pandas as pd
+
+from project_paths import *          # DATA_DIR, FIG_DIR, MODEL_DF_CSV, ... (see project_paths.py)
+from project_paths import require
 
 # ---------------------------------------------------------------------------
 # Reproducibility
@@ -28,17 +43,8 @@ SEED = 42
 REPEATED_CV_SEEDS = range(20)
 
 # ---------------------------------------------------------------------------
-# Data location: works whether a notebook runs from scripts/ or the data root
-# ---------------------------------------------------------------------------
-def _resolve_data_dir() -> Path:
-    module_dir = Path(__file__).resolve().parent          # .../scripts
-    for cand in (module_dir.parent, module_dir, Path.cwd(), Path.cwd().parent):
-        if (cand / "model_df.csv").exists():
-            return cand
-    raise FileNotFoundError("model_df.csv not found near project_config.py or cwd")
-
-DATA_DIR = _resolve_data_dir()
-
+# Data location comes from project_paths (derived from this file's location, so
+# it is independent of the notebook's working directory). Re-exported above.
 # ---------------------------------------------------------------------------
 # Clinical / demographic feature sets (UPPERCASE = canonical constants)
 # ---------------------------------------------------------------------------
@@ -62,7 +68,8 @@ def collapse_functionals(names):
 # Canonical acoustic feature sets, derived once from model_df's columns
 # ---------------------------------------------------------------------------
 def load_model_df() -> pd.DataFrame:
-    return pd.read_csv(DATA_DIR / "model_df.csv", dtype={"subject_key": str})
+    require(MODEL_DF_CSV, "Build it by running MODMA_audio_processing.ipynb end to end.")
+    return pd.read_csv(MODEL_DF_CSV, dtype={"subject_key": str})
 
 _MDF = load_model_df()
 ACOUSTIC_FULL = [c for c in _MDF.columns if c not in _ID_TARGET + CLINICAL]   # 88
@@ -94,10 +101,16 @@ def subject_means(df, feats=None):
     return X, y
 
 def subject_table(csv, feats=None):
-    """Load a per-recording CSV and aggregate to aligned subject means."""
+    """Load a per-recording CSV and aggregate to aligned subject means.
+
+    `csv` may be a bare file name (resolved against DATA_DIR) or a full Path.
+    """
     if feats is None:
         feats = ACOUSTIC
-    f = pd.read_csv(DATA_DIR / csv, dtype={"subject_id": str}).dropna(subset=["phq9"])
+    path = Path(csv)
+    if not path.is_absolute():
+        path = DATA_DIR / path
+    f = pd.read_csv(require(path), dtype={"subject_id": str}).dropna(subset=["phq9"])
     missing = [c for c in feats if c not in f.columns]
     if missing:
         raise ValueError(f"{csv} missing {len(missing)} features, e.g. {missing[:3]}")

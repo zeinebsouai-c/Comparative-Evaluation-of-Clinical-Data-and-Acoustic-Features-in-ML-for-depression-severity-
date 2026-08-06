@@ -1,7 +1,7 @@
-# Extract eGeMAPS features from the NOISY resampled WAVs using openSMILE.
+# Extract eGeMAPS features from the cleaned, resampled WAVs using openSMILE.
 #
 # Run from anywhere -- every path is derived from this script's own location:
-#     & "<repo>/audio_lanzhou_2015/scripts/extract_noisy_egemaps.ps1"
+#     & "<repo>/audio_lanzhou_2015/scripts/extract_egemaps.ps1"
 #
 # Optional overrides:
 #     $env:OPENSMILE_ROOT = "D:\tools\opensmile-3.0-win-x64"   # openSMILE elsewhere
@@ -12,15 +12,16 @@ $smileRoot = if ($env:OPENSMILE_ROOT) { $env:OPENSMILE_ROOT } else { Join-Path $
 
 $smile = Join-Path $smileRoot "bin\SMILExtract.exe"
 $cfg   = Join-Path $smileRoot "config\egemaps\v01a\eGeMAPSv01a.conf"
-$root  = Join-Path $data "audio_lanzhou_2015_noisy"
+$root  = Join-Path $data "audio_lanzhou_2015_resampled"
 
 # --- Sanity checks ---
 if (-not (Test-Path $smile)) { Write-Error "SMILExtract not found: $smile  (set `$env:OPENSMILE_ROOT)"; return }
 if (-not (Test-Path $cfg))   { Write-Error "Config not found: $cfg"; return }
-if (-not (Test-Path $root))  { Write-Error "Noisy audio tree not found: $root  (run the Step 2 noise cell first)"; return }
+if (-not (Test-Path $root))  { Write-Error "Resampled audio tree not found: $root  (run the resampling cell in MODMA_audio_processing.ipynb first)"; return }
 
+# Every resampled WAV under each subject folder
 $wavs = Get-ChildItem -Path $root -Recurse -Filter *_resampled.wav
-Write-Host "Found $($wavs.Count) noisy WAV files. Extracting..."
+Write-Host "Found $($wavs.Count) WAV files. Extracting..."
 
 $done = 0; $skipped = 0; $failed = 0
 foreach ($wav in $wavs) {
@@ -28,10 +29,11 @@ foreach ($wav in $wavs) {
     New-Item -ItemType Directory -Force -Path $outDir | Out-Null
 
     $outCsv = Join-Path $outDir ($wav.BaseName + "_egemaps.csv")
-    if (Test-Path $outCsv) { $skipped++; continue }
+    if (Test-Path $outCsv) { $skipped++; continue }   # resumable
 
-    & $smile -C $cfg -I $wav.FullName -O $outCsv -l 1
-    if ($LASTEXITCODE -eq 0) { $done++ } else { Write-Warning "Failed: $($wav.FullName)"; $failed++ }
+    & $smile -C $cfg -I $wav.FullName -O $outCsv -l 1   # -l 1 = quieter logging
+    if ($LASTEXITCODE -eq 0) { $done++ }
+    else { Write-Warning "Failed: $($wav.FullName)"; $failed++ }
 }
 
-Write-Host "Done. Extracted $done, skipped $skipped existing, $failed failed."
+Write-Host "Extracted $done, skipped $skipped existing, $failed failed."

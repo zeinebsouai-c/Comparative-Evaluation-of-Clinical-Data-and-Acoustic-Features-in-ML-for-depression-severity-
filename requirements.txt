@@ -1,0 +1,24 @@
+# Versions the analysis was last run and verified with.
+# Install with: pip install -r requirements.txt
+
+pandas>=2.2.2
+numpy>=2.2.6
+scipy>=1.17.1
+scikit-learn>=1.9.0
+
+# Excel metadata sheet (pandas.read_excel engine -- imported indirectly)
+openpyxl>=3.1.5
+
+# Plotting
+matplotlib>=3.8.4
+seaborn>=0.13.2
+
+# Interpretability
+shap>=0.51.0
+
+# Audio loading / resampling / noise injection
+librosa>=0.11.0
+soundfile>=0.14.0
+
+# Running the notebooks
+jupyter>=1.0.0

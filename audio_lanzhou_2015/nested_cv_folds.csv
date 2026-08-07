@@ -1,0 +1,11 @@
+fold,select_on,winner,family,n_features,n_test,outer_MAE,outer_R2
+1,MAE,A-priori collapse,A-priori collapse,72,11,6.46090909090909,0.2137244598203446
+1,R2,A-priori collapse,A-priori collapse,72,11,6.46090909090909,0.2137244598203446
+2,MAE,A-priori collapse,A-priori collapse,72,11,6.362727272727273,0.33830736699916863
+2,R2,A-priori collapse,A-priori collapse,72,11,6.362727272727273,0.33830736699916863
+3,MAE,A-priori collapse,A-priori collapse,72,10,5.645,0.2541213892135582
+3,R2,A-priori collapse,A-priori collapse,72,10,5.645,0.2541213892135582
+4,MAE,A-priori collapse,A-priori collapse,72,10,6.404000000000001,-0.04754989928584519
+4,R2,A-priori collapse,A-priori collapse,72,10,6.404000000000001,-0.04754989928584519
+5,MAE,A-priori collapse,A-priori collapse,72,10,6.311,0.21573286346047538
+5,R2,A-priori collapse,A-priori collapse,72,10,6.311,0.21573286346047538

@@ -31,7 +31,7 @@ import os
 from pathlib import Path
 
 __all__ = [
-    "SCRIPTS_DIR", "DATA_DIR", "REPO_ROOT", "FIG_DIR",
+    "SCRIPTS_DIR", "DATA_DIR", "REPO_ROOT", "FIG_DIR", "PLOTS_DIR",
     "SUBJECTS_XLSX", "WAV_INVENTORY", "WAV_INVENTORY_CLEANED",
     "RESAMPLED_DIR", "NOISY_DIR",
     "EGEMAPS_CSV", "EGEMAPS_NOISY_CSV", "MODEL_DF_CSV",
@@ -52,6 +52,10 @@ if _env_data:
 
 # Figures are written next to the notebooks that produce them.
 FIG_DIR = SCRIPTS_DIR
+
+# Exported figures for the write-up: <data_root>/plots/, a sibling of scripts/.
+PLOTS_DIR = DATA_DIR / "plots"
+PLOTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
 # Data files (inputs and derived artefacts, all directly under DATA_DIR)

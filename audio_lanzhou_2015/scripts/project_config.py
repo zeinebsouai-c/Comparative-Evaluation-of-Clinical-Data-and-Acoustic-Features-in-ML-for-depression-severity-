@@ -24,8 +24,8 @@ portable bootstrap cell that puts scripts/ on sys.path:
     model_df = load_model_df()
     y = model_df["phq9"]
 
-Then use the CONSTANTS below everywhere. Never redefine `acoustic` inline again,
-and never write an absolute path into a notebook.
+Then use the CONSTANTS below everywhere. Never redefine `acoustic` or the clinical
+feature lists inline, and never write an absolute path into a notebook.
 """
 
 from pathlib import Path
@@ -47,11 +47,24 @@ REPEATED_CV_SEEDS = range(20)
 # it is independent of the notebook's working directory). Re-exported above.
 # ---------------------------------------------------------------------------
 # Clinical / demographic feature sets (UPPERCASE = canonical constants)
+#
+# PSYCH_ALL  = every questionnaire column present in model_df.
+# PSYCH      = the subset actually modelled.
+#
+# PSQI is excluded from the modelling set: its sleep items overlap PHQ-9 item 3
+# IMPORTANT: a scale dropped from PSYCH must stay in PSYCH_ALL because ACOUSTIC is
+# carved out of model_df by subtraction below, so anything missing from
+# _NON_ACOUSTIC would silently become an "acoustic" feature.
 # ---------------------------------------------------------------------------
-DEMO     = ["age", "gender", "education_years"]
-PSYCH    = ["ctq_sf", "LES", "SSRS", "gad7", "PSQI"]
-CLINICAL = DEMO + PSYCH                                    # 8
-_ID_TARGET = ["subject_key", "phq9"]
+DEMO      = ["age", "gender", "education_years"]
+PSYCH_ALL = ["ctq_sf", "LES", "SSRS", "gad7", "PSQI"]
+EXCLUDED_SCALES = ["PSQI"]
+
+PSYCH    = [c for c in PSYCH_ALL if c not in EXCLUDED_SCALES]    # 4
+CLINICAL = DEMO + PSYCH                                          # 7
+
+_ID_TARGET    = ["subject_key", "phq9"]
+_NON_ACOUSTIC = _ID_TARGET + DEMO + PSYCH_ALL
 
 # ---------------------------------------------------------------------------
 # A-priori functional-collapse rule: keep mean + coefficient of variation per
@@ -72,16 +85,13 @@ def load_model_df() -> pd.DataFrame:
     return pd.read_csv(MODEL_DF_CSV, dtype={"subject_key": str})
 
 _MDF = load_model_df()
-ACOUSTIC_FULL = [c for c in _MDF.columns if c not in _ID_TARGET + CLINICAL]   # 88
-ACOUSTIC      = collapse_functionals(ACOUSTIC_FULL)                           # 72  <-- USE THIS
+ACOUSTIC_FULL = [c for c in _MDF.columns if c not in _NON_ACOUSTIC]   # 88
+ACOUSTIC      = collapse_functionals(ACOUSTIC_FULL)                   # 72  <-- USE THIS
 
 # Convenience combined sets
 DEMO_ACOUSTIC     = DEMO + ACOUSTIC
 CLINICAL_ACOUSTIC = CLINICAL + ACOUSTIC
 
-# Canonical subject ordering (as int) — matches model_df's row order. Aligning every
-# subject-level table to this makes KFold(shuffle, random_state) assign identical folds
-# across notebooks, so results built from recordings match the model_df-based results.
 CANONICAL_ORDER = _MDF["subject_key"].astype(int).tolist()
 
 # ---------------------------------------------------------------------------
@@ -119,10 +129,12 @@ def subject_table(csv, feats=None):
 # ---------------------------------------------------------------------------
 # Acoustic feature -> interpretable category (GeMAPS; Eyben et al. 2016).
 # Perturbation measures jitter + shimmer grouped with HNR under Voice quality.
+# Uses PSYCH_ALL so an excluded scale is still labelled correctly if it turns up
+# in a table (e.g. the PSQI-only baseline).
 # ---------------------------------------------------------------------------
 def categorize(feat):
-    if feat in DEMO:  return "Demographics"
-    if feat in PSYCH: return "Clinical"
+    if feat in DEMO:      return "Demographics"
+    if feat in PSYCH_ALL: return "Clinical"
     fl = feat.lower()
     if any(k in fl for k in ["segmentlength", "segmentspersec", "peakspersec"]): return "Timing/Pauses"
     if "f0semitone" in fl:                                                        return "Pitch"
@@ -154,7 +166,11 @@ def repeated_cv(estimator, X, y, seeds=REPEATED_CV_SEEDS, n_splits=10):
 
 if __name__ == "__main__":
     print(f"DATA_DIR = {DATA_DIR}")
+    print(f"excluded scales: {EXCLUDED_SCALES or 'none'}")
     print(f"DEMO={len(DEMO)} PSYCH={len(PSYCH)} CLINICAL={len(CLINICAL)} "
           f"ACOUSTIC_FULL={len(ACOUSTIC_FULL)} ACOUSTIC={len(ACOUSTIC)}")
+    for s in EXCLUDED_SCALES:
+        assert s not in CLINICAL,      f"{s} leaked back into the modelling set"
+        assert s not in ACOUSTIC_FULL, f"{s} leaked into the acoustic set"
     assert len(ACOUSTIC) == 72, f"Expected 72 collapsed features, got {len(ACOUSTIC)}"
-    print("OK — 72-feature acoustic set is canonical.")
+    print("OK — feature sets are consistent.")

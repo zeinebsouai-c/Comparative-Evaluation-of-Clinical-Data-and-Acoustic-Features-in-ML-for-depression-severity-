@@ -8,6 +8,9 @@
 audio_lanzhou_2015/audio_lanzhou_2015_resampled/
 audio_lanzhou_2015/audio_lanzhou_2015_noisy/
 audio_lanzhou_2015/0*/
+audio_lanzhou_2015/audio_snr*/
+audio_lanzhou_2015/audio_random/
+
 
 # large binaries
 *.edf

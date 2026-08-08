@@ -57,6 +57,7 @@ REPEATED_CV_SEEDS = range(20)
 # _NON_ACOUSTIC would silently become an "acoustic" feature.
 # ---------------------------------------------------------------------------
 DEMO      = ["age", "gender", "education_years"]
+CATEGORICAL = ["gender"]        # the only categorical predictor; already 0/1 coded
 PSYCH_ALL = ["ctq_sf", "LES", "SSRS", "gad7", "PSQI"]
 EXCLUDED_SCALES = ["PSQI"]
 

@@ -17,11 +17,11 @@ from pathlib import Path
 
 import pandas as pd
 
-from project_paths import DATA_DIR, SUBJECTS_XLSX, WAV_INVENTORY, require
+from project_paths import RAW_AUDIO_DIR, SUBJECTS_XLSX, WAV_INVENTORY, require
 
-# Directory that contains the subject-id folders. This script lives in
-# <data_root>/scripts/, so the subject folders are one level up (DATA_DIR).
-BASE_DIR = DATA_DIR
+# Directory that contains the subject-id folders:
+# <data_root>/input/audio_lanzhou_2015_og/ (RAW_AUDIO_DIR).
+BASE_DIR = RAW_AUDIO_DIR
 OUTPUT_CSV = WAV_INVENTORY
 
 
@@ -32,7 +32,7 @@ def load_subject_metadata() -> dict:
     the id as an integer (2010001), so we key the map on the int value.
     """
     df = pd.read_excel(
-        require(SUBJECTS_XLSX, "Place the MODMA metadata sheet in the data root."),
+        require(SUBJECTS_XLSX, "Place the MODMA metadata sheet in input/."),
         usecols=["subject id", "type", "PHQ-9"],
     )
     df = df.dropna(subset=["subject id"])

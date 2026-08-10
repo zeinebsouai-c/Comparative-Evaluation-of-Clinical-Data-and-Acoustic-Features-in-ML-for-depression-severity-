@@ -4,7 +4,7 @@
 #     $env:OPENSMILE_ROOT = "D:\tools\opensmile-3.0-win-x64"   # openSMILE elsewhere
 #     $env:MODMA_DATA_DIR = "E:\modma\audio_lanzhou_2015"      # dataset elsewhere
 
-param([string]$Root = "audio_lanzhou_2015_noisy")
+param([string]$Root = "audio_lanzhou_2015_noisy")   # relative to input/
 
 $data = if ($env:MODMA_DATA_DIR) { $env:MODMA_DATA_DIR } else { Split-Path -Parent $PSScriptRoot }
 $smileRoot = if ($env:OPENSMILE_ROOT) { $env:OPENSMILE_ROOT } else { Join-Path $data "tools\opensmile-3.0-win-x64" }

@@ -4,12 +4,8 @@
 *.flac
 *.m4a
 
-# subject folders and derived audio sets
-audio_lanzhou_2015/audio_lanzhou_2015_resampled/
-audio_lanzhou_2015/audio_lanzhou_2015_noisy/
-audio_lanzhou_2015/0*/
-audio_lanzhou_2015/audio_snr*/
-audio_lanzhou_2015/audio_random/
+# source data: raw + derived audio trees and the MODMA metadata sheet
+audio_lanzhou_2015/input/
 
 
 # large binaries
@@ -28,6 +24,9 @@ __pycache__/
 .ipynb_checkpoints/
 venv/
 .venv/
+
+# tool logs (openSMILE writes smile.log next to wherever it is run)
+*.log
 
 # os
 .DS_Store

@@ -33,7 +33,7 @@ import re
 import numpy as np
 import pandas as pd
 
-from project_paths import *          # DATA_DIR, FIG_DIR, MODEL_DF_CSV, ... (see project_paths.py)
+from project_paths import *          # DATA_DIR, CSV_DIR, PLOTS_DIR, MODEL_DF_CSV, ... (see project_paths.py)
 from project_paths import require
 
 # ---------------------------------------------------------------------------
@@ -114,13 +114,13 @@ def subject_means(df, feats=None):
 def subject_table(csv, feats=None):
     """Load a per-recording CSV and aggregate to aligned subject means.
 
-    `csv` may be a bare file name (resolved against DATA_DIR) or a full Path.
+    `csv` may be a bare file name (resolved against CSV_DIR) or a full Path.
     """
     if feats is None:
         feats = ACOUSTIC
     path = Path(csv)
     if not path.is_absolute():
-        path = DATA_DIR / path
+        path = CSV_DIR / path
     f = pd.read_csv(require(path), dtype={"subject_id": str}).dropna(subset=["phq9"])
     missing = [c for c in feats if c not in f.columns]
     if missing:

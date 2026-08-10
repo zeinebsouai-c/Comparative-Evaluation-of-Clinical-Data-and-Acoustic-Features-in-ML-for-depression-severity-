@@ -12,7 +12,7 @@ $smileRoot = if ($env:OPENSMILE_ROOT) { $env:OPENSMILE_ROOT } else { Join-Path $
 
 $smile = Join-Path $smileRoot "bin\SMILExtract.exe"
 $cfg   = Join-Path $smileRoot "config\egemaps\v01a\eGeMAPSv01a.conf"
-$root  = Join-Path $data "audio_lanzhou_2015_resampled"
+$root  = Join-Path $data "input\audio_lanzhou_2015_resampled"
 
 # --- Sanity checks ---
 if (-not (Test-Path $smile)) { Write-Error "SMILExtract not found: $smile  (set `$env:OPENSMILE_ROOT)"; return }

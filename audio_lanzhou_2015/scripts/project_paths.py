@@ -8,9 +8,15 @@ on any machine or OS.
 Assumed layout (this file lives in <data_root>/scripts/):
 
     <repo_root>/
-        audio_lanzhou_2015/          <- DATA_DIR: all data + result files
-            subjects_information_audio_lanzhou_2015.xlsx
-            02010001/ 02010002/ ...  <- raw subject folders (not in git)
+        audio_lanzhou_2015/          <- DATA_DIR
+            input/                   <- INPUT_DIR: everything the pipeline reads
+                subjects_information_audio_lanzhou_2015.xlsx
+                audio_lanzhou_2015_og/       <- RAW_AUDIO_DIR: 02010001/ 02010002/ ...
+                audio_lanzhou_2015_resampled/
+                audio_lanzhou_2015_noisy/  audio_snr*/  audio_random/
+            output/                  <- OUTPUT_DIR: everything generated
+                csv/                 <- CSV_DIR
+                plots/               <- PLOTS_DIR
             tools/opensmile-3.0-win-x64/
             scripts/                 <- SCRIPTS_DIR: this file + the notebooks
 
@@ -31,7 +37,8 @@ import os
 from pathlib import Path
 
 __all__ = [
-    "SCRIPTS_DIR", "DATA_DIR", "REPO_ROOT", "FIG_DIR", "PLOTS_DIR",
+    "SCRIPTS_DIR", "DATA_DIR", "REPO_ROOT", "INPUT_DIR", "RAW_AUDIO_DIR",
+    "OUTPUT_DIR", "CSV_DIR", "PLOTS_DIR",
     "SUBJECTS_XLSX", "WAV_INVENTORY", "WAV_INVENTORY_CLEANED",
     "RESAMPLED_DIR", "NOISY_DIR",
     "EGEMAPS_CSV", "EGEMAPS_NOISY_CSV", "MODEL_DF_CSV",
@@ -50,27 +57,32 @@ _env_data = os.environ.get("MODMA_DATA_DIR")
 if _env_data:
     DATA_DIR = Path(_env_data).expanduser().resolve()
 
-# Figures are written next to the notebooks that produce them.
-FIG_DIR = SCRIPTS_DIR
+# Source data lives under <data_root>/input/ and everything the notebooks
+# generate under <data_root>/output/, so inputs and artefacts never mix and the
+# generated side can be cleaned as a unit.
+INPUT_DIR = DATA_DIR / "input"
+RAW_AUDIO_DIR = INPUT_DIR / "audio_lanzhou_2015_og"   # 0*/ subject folders, as delivered
 
-# Exported figures for the write-up: <data_root>/plots/, a sibling of scripts/.
-PLOTS_DIR = DATA_DIR / "plots"
-PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+OUTPUT_DIR = DATA_DIR / "output"
+CSV_DIR    = OUTPUT_DIR / "csv"      # every generated .csv (data tables + results)
+PLOTS_DIR  = OUTPUT_DIR / "plots"    # every generated figure
+for _d in (CSV_DIR, PLOTS_DIR):
+    _d.mkdir(parents=True, exist_ok=True)
 
 # ---------------------------------------------------------------------------
 # Data files (inputs and derived artefacts, all directly under DATA_DIR)
 # ---------------------------------------------------------------------------
-SUBJECTS_XLSX = DATA_DIR / "subjects_information_audio_lanzhou_2015.xlsx"
+SUBJECTS_XLSX = INPUT_DIR / "subjects_information_audio_lanzhou_2015.xlsx"
 
-WAV_INVENTORY = DATA_DIR / "wav_inventory.csv"
-WAV_INVENTORY_CLEANED = DATA_DIR / "wav_inventory_cleaned.csv"
+WAV_INVENTORY = CSV_DIR / "wav_inventory.csv"
+WAV_INVENTORY_CLEANED = CSV_DIR / "wav_inventory_cleaned.csv"
 
-RESAMPLED_DIR = DATA_DIR / "audio_lanzhou_2015_resampled"   # 16 kHz mono WAVs
-NOISY_DIR = DATA_DIR / "audio_lanzhou_2015_noisy"           # + white noise @ SNR
+RESAMPLED_DIR = INPUT_DIR / "audio_lanzhou_2015_resampled"   # 16 kHz mono WAVs
+NOISY_DIR = INPUT_DIR / "audio_lanzhou_2015_noisy"           # + white noise @ SNR
 
-EGEMAPS_CSV = DATA_DIR / "egemaps_features.csv"             # per-recording features
-EGEMAPS_NOISY_CSV = DATA_DIR / "egemaps_features_noisy.csv"
-MODEL_DF_CSV = DATA_DIR / "model_df.csv"                    # per-subject modeling table
+EGEMAPS_CSV = CSV_DIR / "egemaps_features.csv"             # per-recording features
+EGEMAPS_NOISY_CSV = CSV_DIR / "egemaps_features_noisy.csv"
+MODEL_DF_CSV = CSV_DIR / "model_df.csv"                    # per-subject modeling table
 
 # ---------------------------------------------------------------------------
 # openSMILE (eGeMAPS extraction). Bundled under tools/ by default.
@@ -103,6 +115,10 @@ if __name__ == "__main__":
     print(f"REPO_ROOT   = {REPO_ROOT}")
     print(f"DATA_DIR    = {DATA_DIR}")
     print(f"SCRIPTS_DIR = {SCRIPTS_DIR}")
+    print()
+    print(f"INPUT_DIR   = {INPUT_DIR}")
+    print(f"CSV_DIR     = {CSV_DIR}")
+    print(f"PLOTS_DIR   = {PLOTS_DIR}")
     print()
     for name in ("SUBJECTS_XLSX", "WAV_INVENTORY", "EGEMAPS_CSV", "MODEL_DF_CSV",
                  "RESAMPLED_DIR", "NOISY_DIR", "SMILEXTRACT", "EGEMAPS_CONF"):

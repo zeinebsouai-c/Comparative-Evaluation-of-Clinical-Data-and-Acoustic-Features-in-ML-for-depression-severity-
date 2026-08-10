@@ -1,4 +1,4 @@
-# Multimodal depression severity prediction comparison, interpretability, robustness
+# Multimodal depression severity prediction comparison: evaluation, interpretability, robustness
 
 Predicting PHQ-9 depression severity from speech and clinical questionnaire data,
 using the Lanzhou 2015 audio subset of the MODMA dataset.

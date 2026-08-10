@@ -1,0 +1,47 @@
+# Conda environment for the depression-severity analysis.
+#
+#   conda env create -f environment.yml
+#   conda activate depression-severity
+#   python audio_lanzhou_2015/scripts/project_paths.py     # verify paths resolve
+#
+# Versions are the ones the analysis was last run and verified with. conda-forge
+# is used for everything: it carries current builds of librosa, shap and
+# soundfile, and mixing it with defaults tends to produce solver conflicts.
+#
+# pip users: requirements.txt lists the same packages. Keep the two in sync.
+
+name: depression-severity
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+
+  # --- core numerics / modelling ---
+  - numpy=2.2.*
+  - pandas=2.2.*
+  - scipy=1.17.*
+  - scikit-learn=1.9.*
+
+  # --- Excel metadata sheet (pandas.read_excel engine) ---
+  - openpyxl=3.1.*
+
+  # --- plotting ---
+  - matplotlib-base=3.8.*
+  - seaborn=0.13.*
+
+  # --- interpretability (pulls numba + llvmlite) ---
+  - shap=0.51.*
+
+  # --- audio: loading, resampling, noise injection, STFT/pYIN ---
+  - librosa=0.11.*
+  - python-soundfile=0.14.*      # imported as `soundfile`; conda name differs
+
+  # --- notebooks ---
+  - jupyterlab=4.2.*
+  - notebook=7.2.*
+  - nbformat=5.10.*
+
+# NOT managed here: openSMILE 3.0, which is a standalone binary bundled under
+# audio_lanzhou_2015/tools/ (or pointed at via the OPENSMILE_ROOT env var).

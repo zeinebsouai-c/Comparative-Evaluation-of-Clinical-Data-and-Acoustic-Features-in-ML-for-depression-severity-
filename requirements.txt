@@ -1,5 +1,9 @@
-# Versions the analysis was last run and verified with.
+# Versions the analysis was last run and verified with (Python 3.11).
 # Install with: pip install -r requirements.txt
+#
+# Conda users: environment.yml pins the same set. Keep the two in sync.
+# Not covered here: openSMILE 3.0, a standalone binary bundled under
+# audio_lanzhou_2015/tools/ (or pointed at via the OPENSMILE_ROOT env var).
 
 pandas>=2.2.2
 numpy>=2.2.6
@@ -21,4 +25,6 @@ librosa>=0.11.0
 soundfile>=0.14.0
 
 # Running the notebooks
-jupyter>=1.0.0
+jupyterlab>=4.2.0
+notebook>=7.2.2
+nbformat>=5.10.4

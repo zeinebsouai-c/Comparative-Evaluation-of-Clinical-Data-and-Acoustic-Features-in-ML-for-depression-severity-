@@ -1,241 +1,241 @@
 model,feature,rank_by_shap,category,mdi,shap_abs,shap_signed,perm_mean,perm_sd
-Demographics,education_years,1,Demographics,0.3989,3.8718,-0.2697,1.0183,0.4917
-Demographics,age,2,Demographics,0.5102,2.7992,0.4211,0.2671,0.2574
-Demographics,gender,3,Demographics,0.0909,1.1642,0.0371,0.0495,0.0764
-Psych,gad7,1,Clinical,0.8741,7.1448,-0.1414,1.5062,0.5615
-Psych,SSRS,2,Clinical,0.0505,0.6341,-0.1807,-0.0295,0.0208
-Psych,LES,3,Clinical,0.0491,0.4384,0.1147,0.0282,0.0178
-Psych,ctq_sf,4,Clinical,0.0263,0.2731,0.074,-0.0045,0.0109
-Clinical,gad7,1,Clinical,0.8641,7.0885,-0.014,1.3817,0.5115
-Clinical,SSRS,2,Clinical,0.0386,0.5577,-0.1557,-0.028,0.0169
-Clinical,age,3,Demographics,0.0288,0.489,-0.0321,-0.0013,0.0103
-Clinical,LES,4,Clinical,0.0369,0.3013,0.0806,0.0269,0.0175
-Clinical,ctq_sf,5,Clinical,0.0128,0.1982,0.0216,-0.0014,0.0053
-Clinical,education_years,6,Demographics,0.0161,0.1402,-0.0266,-0.0052,0.0062
-Clinical,gender,7,Demographics,0.0027,0.0219,0.0092,-0.003,0.0015
-Acoustic,spectralFluxV_sma3nz_amean,1,Spectral,0.2496,1.7802,-0.0496,0.1611,0.1586
-Acoustic,logRelF0-H1-A3_sma3nz_amean,2,Voice quality,0.034,0.7684,0.0058,0.0235,0.0254
-Acoustic,spectralFlux_sma3_amean,3,Spectral,0.0276,0.6986,-0.0258,-0.004,0.0154
-Acoustic,shimmerLocaldB_sma3nz_stddevNorm,4,Voice quality,0.0157,0.5595,0.0292,0.0481,0.0202
-Acoustic,HNRdBACF_sma3nz_stddevNorm,5,Voice quality,0.0144,0.5127,0.0007,0.0067,0.0061
-Acoustic,alphaRatioV_sma3nz_stddevNorm,6,Spectral,0.0278,0.5084,0.004,0.008,0.0293
-Acoustic,spectralFluxUV_sma3nz_amean,7,Spectral,0.0223,0.2902,-0.0017,0.0029,0.0102
-Acoustic,equivalentSoundLevel_dBp,8,Loudness/Energy,0.0467,0.2686,-0.0836,-0.0021,0.0221
-Acoustic,mfcc3V_sma3nz_stddevNorm,9,Spectral,0.0261,0.2363,0.037,0.034,0.0435
-Acoustic,mfcc3_sma3_amean,10,Spectral,0.01,0.1993,-0.0343,-0.0035,0.0052
-Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,11,Voice quality,0.0205,0.189,-0.0048,0.0147,0.0137
-Acoustic,loudness_sma3_stddevNorm,12,Loudness/Energy,0.0115,0.1592,0.0182,-0.0065,0.0115
-Acoustic,F3bandwidth_sma3nz_amean,13,Formants,0.0118,0.1525,0.0126,0.0146,0.0212
-Acoustic,mfcc3V_sma3nz_amean,14,Spectral,0.0108,0.1481,0.016,-0.0247,0.017
-Acoustic,slopeV500-1500_sma3nz_amean,15,Spectral,0.0076,0.1471,-0.0142,-0.0,0.0073
-Acoustic,logRelF0-H1-H2_sma3nz_amean,16,Voice quality,0.0146,0.1432,0.0082,0.0051,0.0226
-Acoustic,mfcc2V_sma3nz_amean,17,Spectral,0.0031,0.1354,-0.0132,-0.0007,0.0058
-Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,18,Formants,0.0277,0.1153,0.0059,-0.0174,0.0175
-Acoustic,mfcc4V_sma3nz_stddevNorm,19,Spectral,0.0033,0.1094,-0.0249,0.0039,0.0051
-Acoustic,spectralFlux_sma3_stddevNorm,20,Spectral,0.0239,0.1018,0.0025,0.0011,0.0102
-Acoustic,mfcc1_sma3_stddevNorm,21,Spectral,0.0132,0.0981,0.0092,0.003,0.0038
-Acoustic,mfcc2_sma3_stddevNorm,22,Spectral,0.0295,0.0972,0.0166,-0.034,0.0094
-Acoustic,slopeV0-500_sma3nz_stddevNorm,23,Spectral,0.0228,0.0961,-0.0002,0.0022,0.0074
-Acoustic,mfcc4_sma3_stddevNorm,24,Spectral,0.0042,0.0947,0.0265,0.001,0.0017
-Acoustic,HNRdBACF_sma3nz_amean,25,Voice quality,0.0076,0.0901,-0.0031,-0.0014,0.0046
-Acoustic,F3bandwidth_sma3nz_stddevNorm,26,Formants,0.0137,0.0878,-0.0196,-0.0024,0.0104
-Acoustic,slopeV500-1500_sma3nz_stddevNorm,27,Spectral,0.0017,0.0848,0.0041,0.0107,0.0063
-Acoustic,F1bandwidth_sma3nz_stddevNorm,28,Formants,0.0073,0.0815,-0.0073,-0.0087,0.0064
-Acoustic,mfcc2V_sma3nz_stddevNorm,29,Spectral,0.0089,0.0801,0.0199,-0.005,0.0037
-Acoustic,mfcc1V_sma3nz_amean,30,Spectral,0.0027,0.0677,-0.0062,0.0044,0.005
-Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,31,Pitch,0.0185,0.0651,0.0086,0.0073,0.0106
-Acoustic,F2frequency_sma3nz_stddevNorm,32,Formants,0.0324,0.0618,-0.0009,-0.0278,0.0273
-Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,33,Voice quality,0.007,0.0614,-0.0047,-0.0087,0.0068
-Acoustic,F2bandwidth_sma3nz_amean,34,Formants,0.005,0.0602,0.0133,-0.0036,0.0034
-Acoustic,mfcc4V_sma3nz_amean,35,Spectral,0.0084,0.0602,-0.0077,0.0,0.006
-Acoustic,mfcc3_sma3_stddevNorm,36,Spectral,0.0068,0.0596,0.0004,-0.0047,0.0023
-Acoustic,slopeUV0-500_sma3nz_amean,37,Spectral,0.0104,0.0578,0.0094,-0.0072,0.0054
-Acoustic,StddevUnvoicedSegmentLength,38,Timing/Pauses,0.0009,0.0572,-0.0068,0.001,0.0023
-Acoustic,mfcc1_sma3_amean,39,Spectral,0.0013,0.0532,-0.0232,-0.0022,0.0048
-Acoustic,F1amplitudeLogRelF0_sma3nz_amean,40,Formants,0.0329,0.0521,0.0044,-0.02,0.0265
-Acoustic,slopeUV500-1500_sma3nz_amean,41,Spectral,0.0008,0.0503,0.0146,0.0009,0.0034
-Acoustic,F2amplitudeLogRelF0_sma3nz_stddevNorm,42,Formants,0.0062,0.0487,-0.0205,-0.0078,0.0057
-Acoustic,loudness_sma3_amean,43,Loudness/Energy,0.0144,0.0451,-0.0077,-0.0051,0.0115
-Acoustic,VoicedSegmentsPerSec,44,Timing/Pauses,0.0026,0.0441,-0.0087,-0.0012,0.0019
-Acoustic,MeanVoicedSegmentLengthSec,45,Timing/Pauses,0.0006,0.0441,0.008,0.0011,0.0011
-Acoustic,F1bandwidth_sma3nz_amean,46,Formants,0.0053,0.0415,-0.0029,0.0005,0.003
-Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,47,Pitch,0.0036,0.0403,0.0072,-0.0014,0.0034
-Acoustic,F2bandwidth_sma3nz_stddevNorm,48,Formants,0.0011,0.0385,0.0011,-0.0016,0.0017
-Acoustic,mfcc1V_sma3nz_stddevNorm,49,Spectral,0.0044,0.0379,-0.0145,-0.0082,0.0063
-Acoustic,mfcc2_sma3_amean,50,Spectral,0.0072,0.0357,0.0,-0.0011,0.0033
-Acoustic,mfcc4_sma3_amean,51,Spectral,0.0095,0.0356,0.0111,0.0054,0.0098
-Acoustic,slopeV0-500_sma3nz_amean,52,Spectral,0.005,0.0339,0.0077,0.0009,0.0026
-Acoustic,alphaRatioUV_sma3nz_amean,53,Spectral,0.0127,0.0323,-0.0122,0.0055,0.0083
-Acoustic,hammarbergIndexUV_sma3nz_amean,54,Spectral,0.0009,0.0281,-0.0049,0.0008,0.0008
-Acoustic,F3frequency_sma3nz_stddevNorm,55,Formants,0.0046,0.027,0.004,-0.0097,0.0043
-Acoustic,F3frequency_sma3nz_amean,56,Formants,0.0026,0.0226,-0.0074,-0.0052,0.0027
-Acoustic,MeanUnvoicedSegmentLength,57,Timing/Pauses,0.0016,0.0224,-0.0057,0.0066,0.0054
-Acoustic,F1frequency_sma3nz_stddevNorm,58,Formants,0.0036,0.021,0.0043,0.0008,0.0032
-Acoustic,loudnessPeaksPerSec,59,Timing/Pauses,0.006,0.0202,0.002,-0.0064,0.0045
-Acoustic,jitterLocal_sma3nz_stddevNorm,60,Voice quality,0.0006,0.0199,-0.0012,-0.0001,0.0014
-Acoustic,jitterLocal_sma3nz_amean,61,Voice quality,0.0062,0.0199,-0.0062,0.0037,0.0034
-Acoustic,F3amplitudeLogRelF0_sma3nz_amean,62,Formants,0.0162,0.0165,-0.0033,-0.01,0.0109
-Acoustic,alphaRatioV_sma3nz_amean,63,Spectral,0.0027,0.0161,-0.0095,-0.0025,0.0033
-Acoustic,F1frequency_sma3nz_amean,64,Formants,0.0023,0.0147,0.0016,-0.0007,0.0013
-Acoustic,shimmerLocaldB_sma3nz_amean,65,Voice quality,0.002,0.0128,-0.0021,0.0014,0.0021
-Acoustic,StddevVoicedSegmentLengthSec,66,Timing/Pauses,0.0067,0.012,0.0014,-0.008,0.0051
-Acoustic,hammarbergIndexV_sma3nz_amean,67,Spectral,0.0053,0.0104,-0.0003,-0.0048,0.0095
-Acoustic,F2frequency_sma3nz_amean,68,Formants,0.0005,0.0101,-0.0012,-0.0015,0.0006
-Acoustic,spectralFluxV_sma3nz_stddevNorm,69,Spectral,0.0105,0.0071,-0.0003,-0.0057,0.0055
-Acoustic,hammarbergIndexV_sma3nz_stddevNorm,70,Spectral,0.0051,0.0069,0.0015,-0.0097,0.0044
-Acoustic,F2amplitudeLogRelF0_sma3nz_amean,71,Formants,0.0046,0.0059,0.0,-0.006,0.0037
-Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,72,Formants,0.0004,0.0054,-0.0016,0.0005,0.0008
-Demographics+Acoustic,spectralFluxV_sma3nz_amean,1,Spectral,0.2357,1.5913,-0.0474,0.1242,0.126
-Demographics+Acoustic,education_years,2,Demographics,0.034,0.8527,-0.0686,0.0546,0.0329
-Demographics+Acoustic,logRelF0-H1-A3_sma3nz_amean,3,Voice quality,0.0349,0.727,0.0078,0.0293,0.0217
-Demographics+Acoustic,spectralFlux_sma3_amean,4,Spectral,0.0396,0.6795,-0.039,-0.0043,0.024
-Demographics+Acoustic,HNRdBACF_sma3nz_stddevNorm,5,Voice quality,0.014,0.5288,-0.0251,0.0168,0.0107
-Demographics+Acoustic,alphaRatioV_sma3nz_stddevNorm,6,Spectral,0.0184,0.477,0.0183,0.0236,0.0218
-Demographics+Acoustic,shimmerLocaldB_sma3nz_stddevNorm,7,Voice quality,0.0142,0.4151,0.0226,0.0397,0.0171
-Demographics+Acoustic,mfcc3V_sma3nz_stddevNorm,8,Spectral,0.0255,0.2761,0.0532,0.042,0.0449
-Demographics+Acoustic,mfcc3_sma3_amean,9,Spectral,0.0065,0.2469,-0.0351,0.0088,0.0069
-Demographics+Acoustic,equivalentSoundLevel_dBp,10,Loudness/Energy,0.0297,0.1889,-0.0564,-0.0029,0.0105
-Demographics+Acoustic,spectralFluxUV_sma3nz_amean,11,Spectral,0.0222,0.1871,0.0455,-0.0098,0.0146
-Demographics+Acoustic,age,12,Demographics,0.0159,0.1738,-0.001,0.0026,0.0057
-Demographics+Acoustic,slopeV500-1500_sma3nz_amean,13,Spectral,0.0112,0.1405,-0.0201,0.0022,0.0063
-Demographics+Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,14,Voice quality,0.0157,0.1386,-0.0186,0.0028,0.0079
-Demographics+Acoustic,mfcc2V_sma3nz_amean,15,Spectral,0.0038,0.1282,-0.0122,-0.0004,0.0081
-Demographics+Acoustic,mfcc3V_sma3nz_amean,16,Spectral,0.0066,0.1266,-0.0084,-0.0177,0.0099
-Demographics+Acoustic,loudness_sma3_stddevNorm,17,Loudness/Energy,0.0145,0.1135,0.0111,-0.0081,0.0186
-Demographics+Acoustic,mfcc1_sma3_stddevNorm,18,Spectral,0.0131,0.1108,-0.0067,0.0037,0.0041
-Demographics+Acoustic,F1amplitudeLogRelF0_sma3nz_amean,19,Formants,0.0366,0.1067,0.0106,-0.0143,0.0209
-Demographics+Acoustic,spectralFlux_sma3_stddevNorm,20,Spectral,0.0129,0.1015,0.0124,0.0043,0.0044
-Demographics+Acoustic,mfcc2_sma3_stddevNorm,21,Spectral,0.0262,0.0931,0.0329,-0.0308,0.009
-Demographics+Acoustic,mfcc4_sma3_stddevNorm,22,Spectral,0.0046,0.0879,0.0207,-0.0026,0.0024
-Demographics+Acoustic,F3bandwidth_sma3nz_amean,23,Formants,0.0146,0.0855,0.0044,0.0117,0.0207
-Demographics+Acoustic,mfcc2V_sma3nz_stddevNorm,24,Spectral,0.0114,0.0837,0.0288,-0.0061,0.0046
-Demographics+Acoustic,logRelF0-H1-H2_sma3nz_amean,25,Voice quality,0.0169,0.0837,0.0001,0.0039,0.0305
-Demographics+Acoustic,F3bandwidth_sma3nz_stddevNorm,26,Formants,0.0102,0.0819,-0.02,0.0023,0.0096
-Demographics+Acoustic,mfcc4V_sma3nz_stddevNorm,27,Spectral,0.005,0.0773,-0.0122,0.0045,0.003
-Demographics+Acoustic,F2frequency_sma3nz_stddevNorm,28,Formants,0.0349,0.0729,0.01,-0.0139,0.02
-Demographics+Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,29,Formants,0.0179,0.0726,-0.0094,-0.0193,0.0151
-Demographics+Acoustic,slopeV0-500_sma3nz_stddevNorm,30,Spectral,0.0185,0.0725,0.0001,0.0039,0.0064
-Demographics+Acoustic,HNRdBACF_sma3nz_amean,31,Voice quality,0.0131,0.0716,-0.0011,-0.0033,0.0052
-Demographics+Acoustic,mfcc1V_sma3nz_amean,32,Spectral,0.0022,0.0653,-0.0281,0.0047,0.0035
-Demographics+Acoustic,F1bandwidth_sma3nz_stddevNorm,33,Formants,0.0113,0.0632,-0.0091,-0.005,0.0052
-Demographics+Acoustic,slopeV500-1500_sma3nz_stddevNorm,34,Spectral,0.0031,0.0603,0.0004,0.0046,0.0045
-Demographics+Acoustic,alphaRatioUV_sma3nz_amean,35,Spectral,0.0184,0.0592,-0.0004,0.0067,0.0101
-Demographics+Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,36,Pitch,0.0149,0.0555,0.0045,0.0063,0.0076
-Demographics+Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,37,Voice quality,0.0052,0.0527,-0.0025,-0.0046,0.0047
-Demographics+Acoustic,loudness_sma3_amean,38,Loudness/Energy,0.0066,0.0522,-0.0105,-0.006,0.0058
-Demographics+Acoustic,slopeUV0-500_sma3nz_amean,39,Spectral,0.0072,0.0503,-0.001,-0.0076,0.0058
-Demographics+Acoustic,StddevUnvoicedSegmentLength,40,Timing/Pauses,0.0009,0.0495,-0.0052,-0.0012,0.0012
-Demographics+Acoustic,slopeV0-500_sma3nz_amean,41,Spectral,0.0028,0.0469,-0.0039,0.0009,0.0024
-Demographics+Acoustic,F2amplitudeLogRelF0_sma3nz_amean,42,Formants,0.0083,0.0459,-0.0216,-0.0049,0.0051
-Demographics+Acoustic,VoicedSegmentsPerSec,43,Timing/Pauses,0.0019,0.0442,-0.0228,-0.0017,0.0019
-Demographics+Acoustic,mfcc1_sma3_amean,44,Spectral,0.0008,0.0438,0.0026,-0.0023,0.0027
-Demographics+Acoustic,mfcc1V_sma3nz_stddevNorm,45,Spectral,0.0057,0.0427,-0.0035,-0.0072,0.0031
-Demographics+Acoustic,mfcc2_sma3_amean,46,Spectral,0.0026,0.0414,0.0053,0.0001,0.0016
-Demographics+Acoustic,mfcc3_sma3_stddevNorm,47,Spectral,0.0104,0.0413,-0.0026,-0.0063,0.0024
-Demographics+Acoustic,F3amplitudeLogRelF0_sma3nz_amean,48,Formants,0.0141,0.0406,0.0085,-0.0096,0.0072
-Demographics+Acoustic,hammarbergIndexUV_sma3nz_amean,49,Spectral,0.0013,0.0388,0.0046,0.0005,0.0023
-Demographics+Acoustic,F3frequency_sma3nz_stddevNorm,50,Formants,0.0048,0.0367,-0.0036,-0.0108,0.0052
-Demographics+Acoustic,F1bandwidth_sma3nz_amean,51,Formants,0.0012,0.0352,-0.0071,0.0013,0.0015
-Demographics+Acoustic,MeanVoicedSegmentLengthSec,52,Timing/Pauses,0.0006,0.0348,0.0068,-0.0012,0.0012
-Demographics+Acoustic,loudnessPeaksPerSec,53,Timing/Pauses,0.003,0.0345,-0.007,0.0016,0.0029
-Demographics+Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,54,Pitch,0.0031,0.0306,-0.0054,-0.0015,0.0022
-Demographics+Acoustic,mfcc4V_sma3nz_amean,55,Spectral,0.0082,0.026,0.0056,0.0,0.0046
-Demographics+Acoustic,mfcc4_sma3_amean,56,Spectral,0.0097,0.0234,-0.0023,0.0136,0.0095
-Demographics+Acoustic,spectralFluxV_sma3nz_stddevNorm,57,Spectral,0.01,0.0203,-0.007,-0.0036,0.006
-Demographics+Acoustic,MeanUnvoicedSegmentLength,58,Timing/Pauses,0.0003,0.0186,-0.0079,0.0001,0.0005
-Demographics+Acoustic,hammarbergIndexV_sma3nz_stddevNorm,59,Spectral,0.0035,0.0184,0.0106,-0.0025,0.0049
-Demographics+Acoustic,F3frequency_sma3nz_amean,60,Formants,0.0017,0.0181,0.0017,0.003,0.0022
-Demographics+Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,61,Formants,0.0071,0.0176,0.0037,-0.0068,0.0062
-Demographics+Acoustic,F2frequency_sma3nz_amean,62,Formants,0.0035,0.0173,-0.0032,-0.0012,0.0031
-Demographics+Acoustic,shimmerLocaldB_sma3nz_amean,63,Voice quality,0.0057,0.0172,-0.0022,0.0039,0.0029
-Demographics+Acoustic,jitterLocal_sma3nz_amean,64,Voice quality,0.0098,0.0168,0.0007,-0.0005,0.0049
-Demographics+Acoustic,F1frequency_sma3nz_stddevNorm,65,Formants,0.0054,0.015,-0.0018,-0.001,0.0052
-Demographics+Acoustic,F2bandwidth_sma3nz_stddevNorm,66,Formants,0.0013,0.0141,-0.003,0.0004,0.0014
-Demographics+Acoustic,F1frequency_sma3nz_amean,67,Formants,0.0022,0.0138,-0.0007,0.0003,0.0013
-Demographics+Acoustic,jitterLocal_sma3nz_stddevNorm,68,Voice quality,0.0011,0.0138,-0.0098,-0.0019,0.0014
-Demographics+Acoustic,alphaRatioV_sma3nz_amean,69,Spectral,0.0012,0.0135,0.0033,0.0004,0.0017
-Demographics+Acoustic,StddevVoicedSegmentLengthSec,70,Timing/Pauses,0.0061,0.0122,-0.0054,-0.0122,0.0073
-Demographics+Acoustic,hammarbergIndexV_sma3nz_amean,71,Spectral,0.0042,0.0087,-0.0009,-0.0074,0.0064
-Demographics+Acoustic,F2amplitudeLogRelF0_sma3nz_stddevNorm,72,Formants,0.0059,0.0078,0.0049,-0.0096,0.0062
-Demographics+Acoustic,slopeUV500-1500_sma3nz_amean,73,Spectral,0.0014,0.0075,-0.0007,-0.0036,0.0026
-Demographics+Acoustic,F2bandwidth_sma3nz_amean,74,Formants,0.0025,0.0066,0.0022,0.0026,0.0034
-Demographics+Acoustic,gender,75,Demographics,0.0003,0.0004,-0.0001,-0.0001,0.0003
-Clinical+Acoustic,gad7,1,Clinical,0.8211,7.0741,-0.0448,1.5175,0.5604
-Clinical+Acoustic,mfcc3_sma3_amean,2,Spectral,0.0028,0.2908,-0.0245,0.0003,0.001
-Clinical+Acoustic,age,3,Demographics,0.0059,0.2617,-0.0251,0.0034,0.0025
-Clinical+Acoustic,mfcc4V_sma3nz_amean,4,Spectral,0.0102,0.1594,0.0034,0.0063,0.0052
-Clinical+Acoustic,mfcc2V_sma3nz_amean,5,Spectral,0.0038,0.1088,0.0012,0.0016,0.0026
-Clinical+Acoustic,mfcc2V_sma3nz_stddevNorm,6,Spectral,0.0088,0.0938,0.0159,-0.0028,0.0023
-Clinical+Acoustic,F2frequency_sma3nz_stddevNorm,7,Formants,0.0006,0.0835,0.0086,0.0006,0.0006
-Clinical+Acoustic,alphaRatioUV_sma3nz_amean,8,Spectral,0.0036,0.0788,-0.023,0.0023,0.0018
-Clinical+Acoustic,mfcc1_sma3_stddevNorm,9,Spectral,0.0043,0.0694,0.0069,0.001,0.0012
-Clinical+Acoustic,LES,10,Clinical,0.0057,0.0687,0.0227,0.0055,0.0045
-Clinical+Acoustic,hammarbergIndexUV_sma3nz_amean,11,Spectral,0.0022,0.0559,-0.0026,0.0001,0.001
-Clinical+Acoustic,spectralFluxV_sma3nz_stddevNorm,12,Spectral,0.0044,0.0478,-0.0061,-0.0032,0.0026
-Clinical+Acoustic,spectralFlux_sma3_stddevNorm,13,Spectral,0.0098,0.0472,-0.0014,-0.0027,0.0057
-Clinical+Acoustic,ctq_sf,14,Clinical,0.0009,0.0471,0.0012,0.0012,0.0005
-Clinical+Acoustic,slopeV500-1500_sma3nz_stddevNorm,15,Spectral,0.0012,0.0465,-0.002,0.001,0.001
-Clinical+Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,16,Voice quality,0.0074,0.0456,-0.001,-0.0005,0.002
-Clinical+Acoustic,mfcc3V_sma3nz_stddevNorm,17,Spectral,0.0103,0.0449,0.008,-0.0033,0.0035
-Clinical+Acoustic,SSRS,18,Clinical,0.0013,0.0442,-0.0247,-0.0006,0.0009
-Clinical+Acoustic,spectralFlux_sma3_amean,19,Spectral,0.0026,0.0384,-0.0116,-0.0022,0.0013
-Clinical+Acoustic,mfcc4_sma3_stddevNorm,20,Spectral,0.0083,0.0382,0.0023,0.0054,0.0041
-Clinical+Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,21,Pitch,0.0051,0.038,-0.0166,-0.0011,0.002
-Clinical+Acoustic,shimmerLocaldB_sma3nz_stddevNorm,22,Voice quality,0.002,0.0373,-0.0048,-0.001,0.0009
-Clinical+Acoustic,F2bandwidth_sma3nz_stddevNorm,23,Formants,0.0001,0.0373,-0.0101,0.0002,0.0001
-Clinical+Acoustic,mfcc4V_sma3nz_stddevNorm,24,Spectral,0.0022,0.0357,0.0024,0.001,0.0009
-Clinical+Acoustic,slopeUV0-500_sma3nz_amean,25,Spectral,0.0007,0.0354,-0.0085,-0.0001,0.0004
-Clinical+Acoustic,spectralFluxV_sma3nz_amean,26,Spectral,0.0018,0.0345,0.006,-0.0008,0.0007
-Clinical+Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,27,Voice quality,0.0062,0.0322,-0.0027,0.0001,0.0017
-Clinical+Acoustic,StddevUnvoicedSegmentLength,28,Timing/Pauses,0.0002,0.0284,0.0053,-0.0001,0.0002
-Clinical+Acoustic,mfcc1V_sma3nz_amean,29,Spectral,0.0055,0.0275,-0.0055,-0.002,0.0016
-Clinical+Acoustic,MeanVoicedSegmentLengthSec,30,Timing/Pauses,0.0012,0.027,-0.0002,-0.0005,0.0009
-Clinical+Acoustic,mfcc4_sma3_amean,31,Spectral,0.0004,0.0259,0.0001,-0.0004,0.0002
-Clinical+Acoustic,F1frequency_sma3nz_stddevNorm,32,Formants,0.0032,0.025,0.0036,0.0005,0.0019
-Clinical+Acoustic,F1bandwidth_sma3nz_amean,33,Formants,0.0025,0.024,0.0005,-0.0,0.0009
-Clinical+Acoustic,HNRdBACF_sma3nz_amean,34,Voice quality,0.0027,0.0239,-0.004,-0.0006,0.0009
-Clinical+Acoustic,education_years,35,Demographics,0.001,0.0227,-0.0059,0.0005,0.0004
-Clinical+Acoustic,F3bandwidth_sma3nz_amean,36,Formants,0.0003,0.0221,-0.0015,-0.0004,0.0003
-Clinical+Acoustic,mfcc1_sma3_amean,37,Spectral,0.0024,0.0206,-0.0015,-0.0008,0.0011
-Clinical+Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,38,Formants,0.0003,0.0206,-0.0044,0.0002,0.0002
-Clinical+Acoustic,slopeV500-1500_sma3nz_amean,39,Spectral,0.0003,0.0205,-0.0037,-0.0002,0.0002
-Clinical+Acoustic,equivalentSoundLevel_dBp,40,Loudness/Energy,0.0012,0.0201,-0.0058,-0.001,0.0005
-Clinical+Acoustic,mfcc3_sma3_stddevNorm,41,Spectral,0.0015,0.0185,-0.0025,0.0003,0.0002
-Clinical+Acoustic,StddevVoicedSegmentLengthSec,42,Timing/Pauses,0.0008,0.0181,0.0037,0.0001,0.0004
-Clinical+Acoustic,mfcc3V_sma3nz_amean,43,Spectral,0.0014,0.0177,-0.0063,-0.0004,0.0005
-Clinical+Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,44,Pitch,0.0051,0.0163,0.0042,0.0006,0.001
-Clinical+Acoustic,slopeV0-500_sma3nz_amean,45,Spectral,0.0005,0.0157,0.0014,-0.0001,0.0003
-Clinical+Acoustic,alphaRatioV_sma3nz_amean,46,Spectral,0.0009,0.0151,-0.0025,0.0005,0.0003
-Clinical+Acoustic,mfcc2_sma3_amean,47,Spectral,0.0005,0.0147,-0.0052,0.0009,0.0005
-Clinical+Acoustic,F1bandwidth_sma3nz_stddevNorm,48,Formants,0.0017,0.0146,-0.0066,-0.0011,0.0006
-Clinical+Acoustic,F3frequency_sma3nz_amean,49,Formants,0.0004,0.0145,-0.008,0.0006,0.0002
-Clinical+Acoustic,hammarbergIndexV_sma3nz_stddevNorm,50,Spectral,0.0007,0.0132,-0.0005,-0.0005,0.0004
-Clinical+Acoustic,F3bandwidth_sma3nz_stddevNorm,51,Formants,0.0015,0.0129,0.0023,0.0013,0.0009
-Clinical+Acoustic,loudness_sma3_stddevNorm,52,Loudness/Energy,0.0022,0.0129,-0.0041,-0.0012,0.0011
-Clinical+Acoustic,alphaRatioV_sma3nz_stddevNorm,53,Spectral,0.0003,0.0128,0.001,0.0003,0.0002
-Clinical+Acoustic,spectralFluxUV_sma3nz_amean,54,Spectral,0.002,0.0123,-0.0076,-0.0019,0.0008
-Clinical+Acoustic,mfcc1V_sma3nz_stddevNorm,55,Spectral,0.0013,0.012,-0.0004,-0.0008,0.0005
-Clinical+Acoustic,F2bandwidth_sma3nz_amean,56,Formants,0.0005,0.0116,-0.0016,0.0002,0.0004
-Clinical+Acoustic,HNRdBACF_sma3nz_stddevNorm,57,Voice quality,0.0012,0.0112,-0.0055,0.0003,0.0007
+Demographics,education_years,1,Demographics,0.4268,3.8718,-0.2697,1.0183,0.4917
+Demographics,age,2,Demographics,0.4791,2.7992,0.4211,0.2671,0.2574
+Demographics,gender,3,Demographics,0.0941,1.1642,0.0371,0.0495,0.0764
+Psych,gad7,1,Clinical,0.8931,7.1448,-0.1414,1.5062,0.5615
+Psych,SSRS,2,Clinical,0.046,0.6341,-0.1807,-0.0295,0.0208
+Psych,LES,3,Clinical,0.0376,0.4384,0.1147,0.0282,0.0178
+Psych,ctq_sf,4,Clinical,0.0234,0.2731,0.074,-0.0045,0.0109
+Clinical,gad7,1,Clinical,0.8809,7.0885,-0.014,1.3817,0.5115
+Clinical,SSRS,2,Clinical,0.0323,0.5577,-0.1557,-0.028,0.0169
+Clinical,age,3,Demographics,0.0317,0.489,-0.0321,-0.0013,0.0103
+Clinical,LES,4,Clinical,0.0262,0.3013,0.0806,0.0269,0.0175
+Clinical,ctq_sf,5,Clinical,0.0165,0.1982,0.0216,-0.0014,0.0053
+Clinical,education_years,6,Demographics,0.01,0.1402,-0.0266,-0.0052,0.0062
+Clinical,gender,7,Demographics,0.0025,0.0219,0.0092,-0.003,0.0015
+Acoustic,spectralFluxV_sma3nz_amean,1,Spectral,0.1894,1.7802,-0.0496,0.1611,0.1586
+Acoustic,logRelF0-H1-A3_sma3nz_amean,2,Voice quality,0.0819,0.7684,0.0058,0.0235,0.0254
+Acoustic,spectralFlux_sma3_amean,3,Spectral,0.0661,0.6986,-0.0258,-0.004,0.0154
+Acoustic,shimmerLocaldB_sma3nz_stddevNorm,4,Voice quality,0.0478,0.5595,0.0292,0.0481,0.0202
+Acoustic,HNRdBACF_sma3nz_stddevNorm,5,Voice quality,0.0591,0.5127,0.0007,0.0067,0.0061
+Acoustic,alphaRatioV_sma3nz_stddevNorm,6,Spectral,0.0595,0.5084,0.004,0.008,0.0293
+Acoustic,spectralFluxUV_sma3nz_amean,7,Spectral,0.0272,0.2902,-0.0017,0.0029,0.0102
+Acoustic,equivalentSoundLevel_dBp,8,Loudness/Energy,0.0324,0.2686,-0.0836,-0.0021,0.0221
+Acoustic,mfcc3V_sma3nz_stddevNorm,9,Spectral,0.0193,0.2363,0.037,0.034,0.0435
+Acoustic,mfcc3_sma3_amean,10,Spectral,0.0158,0.1993,-0.0343,-0.0035,0.0052
+Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,11,Voice quality,0.0282,0.189,-0.0048,0.0147,0.0137
+Acoustic,loudness_sma3_stddevNorm,12,Loudness/Energy,0.0185,0.1592,0.0182,-0.0065,0.0115
+Acoustic,F3bandwidth_sma3nz_amean,13,Formants,0.0121,0.1525,0.0126,0.0146,0.0212
+Acoustic,mfcc3V_sma3nz_amean,14,Spectral,0.0147,0.1481,0.016,-0.0247,0.017
+Acoustic,slopeV500-1500_sma3nz_amean,15,Spectral,0.0189,0.1471,-0.0142,-0.0,0.0073
+Acoustic,logRelF0-H1-H2_sma3nz_amean,16,Voice quality,0.016,0.1432,0.0082,0.0051,0.0226
+Acoustic,mfcc2V_sma3nz_amean,17,Spectral,0.006,0.1354,-0.0132,-0.0007,0.0058
+Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,18,Formants,0.0127,0.1153,0.0059,-0.0174,0.0175
+Acoustic,mfcc4V_sma3nz_stddevNorm,19,Spectral,0.0155,0.1094,-0.0249,0.0039,0.0051
+Acoustic,spectralFlux_sma3_stddevNorm,20,Spectral,0.0132,0.1018,0.0025,0.0011,0.0102
+Acoustic,mfcc1_sma3_stddevNorm,21,Spectral,0.015,0.0981,0.0092,0.003,0.0038
+Acoustic,mfcc2_sma3_stddevNorm,22,Spectral,0.01,0.0972,0.0166,-0.034,0.0094
+Acoustic,slopeV0-500_sma3nz_stddevNorm,23,Spectral,0.0155,0.0961,-0.0002,0.0022,0.0074
+Acoustic,mfcc4_sma3_stddevNorm,24,Spectral,0.0083,0.0947,0.0265,0.001,0.0017
+Acoustic,HNRdBACF_sma3nz_amean,25,Voice quality,0.0077,0.0901,-0.0031,-0.0014,0.0046
+Acoustic,F3bandwidth_sma3nz_stddevNorm,26,Formants,0.0121,0.0878,-0.0196,-0.0024,0.0104
+Acoustic,slopeV500-1500_sma3nz_stddevNorm,27,Spectral,0.0084,0.0848,0.0041,0.0107,0.0063
+Acoustic,F1bandwidth_sma3nz_stddevNorm,28,Formants,0.0075,0.0815,-0.0073,-0.0087,0.0064
+Acoustic,mfcc2V_sma3nz_stddevNorm,29,Spectral,0.0092,0.0801,0.0199,-0.005,0.0037
+Acoustic,mfcc1V_sma3nz_amean,30,Spectral,0.009,0.0677,-0.0062,0.0044,0.005
+Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,31,Pitch,0.0061,0.0651,0.0086,0.0073,0.0106
+Acoustic,F2frequency_sma3nz_stddevNorm,32,Formants,0.004,0.0618,-0.0009,-0.0278,0.0273
+Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,33,Voice quality,0.0088,0.0614,-0.0047,-0.0087,0.0068
+Acoustic,F2bandwidth_sma3nz_amean,34,Formants,0.0055,0.0602,0.0133,-0.0036,0.0034
+Acoustic,mfcc4V_sma3nz_amean,35,Spectral,0.0054,0.0602,-0.0077,0.0,0.006
+Acoustic,mfcc3_sma3_stddevNorm,36,Spectral,0.005,0.0596,0.0004,-0.0047,0.0023
+Acoustic,slopeUV0-500_sma3nz_amean,37,Spectral,0.004,0.0578,0.0094,-0.0072,0.0054
+Acoustic,StddevUnvoicedSegmentLength,38,Timing/Pauses,0.0077,0.0572,-0.0068,0.001,0.0023
+Acoustic,mfcc1_sma3_amean,39,Spectral,0.0078,0.0532,-0.0232,-0.0022,0.0048
+Acoustic,F1amplitudeLogRelF0_sma3nz_amean,40,Formants,0.007,0.0521,0.0044,-0.02,0.0265
+Acoustic,slopeUV500-1500_sma3nz_amean,41,Spectral,0.008,0.0503,0.0146,0.0009,0.0034
+Acoustic,F2amplitudeLogRelF0_sma3nz_stddevNorm,42,Formants,0.0034,0.0487,-0.0205,-0.0078,0.0057
+Acoustic,loudness_sma3_amean,43,Loudness/Energy,0.0056,0.0451,-0.0077,-0.0051,0.0115
+Acoustic,VoicedSegmentsPerSec,44,Timing/Pauses,0.0048,0.0441,-0.0087,-0.0012,0.0019
+Acoustic,MeanVoicedSegmentLengthSec,45,Timing/Pauses,0.0024,0.0441,0.008,0.0011,0.0011
+Acoustic,F1bandwidth_sma3nz_amean,46,Formants,0.0016,0.0415,-0.0029,0.0005,0.003
+Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,47,Pitch,0.0034,0.0403,0.0072,-0.0014,0.0034
+Acoustic,F2bandwidth_sma3nz_stddevNorm,48,Formants,0.0018,0.0385,0.0011,-0.0016,0.0017
+Acoustic,mfcc1V_sma3nz_stddevNorm,49,Spectral,0.0064,0.0379,-0.0145,-0.0082,0.0063
+Acoustic,mfcc2_sma3_amean,50,Spectral,0.0045,0.0357,0.0,-0.0011,0.0033
+Acoustic,mfcc4_sma3_amean,51,Spectral,0.0035,0.0356,0.0111,0.0054,0.0098
+Acoustic,slopeV0-500_sma3nz_amean,52,Spectral,0.0038,0.0339,0.0077,0.0009,0.0026
+Acoustic,alphaRatioUV_sma3nz_amean,53,Spectral,0.003,0.0323,-0.0122,0.0055,0.0083
+Acoustic,hammarbergIndexUV_sma3nz_amean,54,Spectral,0.0031,0.0281,-0.0049,0.0008,0.0008
+Acoustic,F3frequency_sma3nz_stddevNorm,55,Formants,0.003,0.027,0.004,-0.0097,0.0043
+Acoustic,F3frequency_sma3nz_amean,56,Formants,0.004,0.0226,-0.0074,-0.0052,0.0027
+Acoustic,MeanUnvoicedSegmentLength,57,Timing/Pauses,0.002,0.0224,-0.0057,0.0066,0.0054
+Acoustic,F1frequency_sma3nz_stddevNorm,58,Formants,0.0034,0.021,0.0043,0.0008,0.0032
+Acoustic,loudnessPeaksPerSec,59,Timing/Pauses,0.0007,0.0202,0.002,-0.0064,0.0045
+Acoustic,jitterLocal_sma3nz_stddevNorm,60,Voice quality,0.002,0.0199,-0.0012,-0.0001,0.0014
+Acoustic,jitterLocal_sma3nz_amean,61,Voice quality,0.0015,0.0199,-0.0062,0.0037,0.0034
+Acoustic,F3amplitudeLogRelF0_sma3nz_amean,62,Formants,0.0018,0.0165,-0.0033,-0.01,0.0109
+Acoustic,alphaRatioV_sma3nz_amean,63,Spectral,0.0019,0.0161,-0.0095,-0.0025,0.0033
+Acoustic,F1frequency_sma3nz_amean,64,Formants,0.0013,0.0147,0.0016,-0.0007,0.0013
+Acoustic,shimmerLocaldB_sma3nz_amean,65,Voice quality,0.0013,0.0128,-0.0021,0.0014,0.0021
+Acoustic,StddevVoicedSegmentLengthSec,66,Timing/Pauses,0.0007,0.012,0.0014,-0.008,0.0051
+Acoustic,hammarbergIndexV_sma3nz_amean,67,Spectral,0.0006,0.0104,-0.0003,-0.0048,0.0095
+Acoustic,F2frequency_sma3nz_amean,68,Formants,0.0003,0.0101,-0.0012,-0.0015,0.0006
+Acoustic,spectralFluxV_sma3nz_stddevNorm,69,Spectral,0.0003,0.0071,-0.0003,-0.0057,0.0055
+Acoustic,hammarbergIndexV_sma3nz_stddevNorm,70,Spectral,0.0007,0.0069,0.0015,-0.0097,0.0044
+Acoustic,F2amplitudeLogRelF0_sma3nz_amean,71,Formants,0.0004,0.0059,0.0,-0.006,0.0037
+Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,72,Formants,0.0003,0.0054,-0.0016,0.0005,0.0008
+Demographics+Acoustic,spectralFluxV_sma3nz_amean,1,Spectral,0.1759,1.5913,-0.0474,0.1242,0.126
+Demographics+Acoustic,education_years,2,Demographics,0.0899,0.8527,-0.0686,0.0546,0.0329
+Demographics+Acoustic,logRelF0-H1-A3_sma3nz_amean,3,Voice quality,0.0755,0.727,0.0078,0.0293,0.0217
+Demographics+Acoustic,spectralFlux_sma3_amean,4,Spectral,0.0656,0.6795,-0.039,-0.0043,0.024
+Demographics+Acoustic,HNRdBACF_sma3nz_stddevNorm,5,Voice quality,0.0559,0.5288,-0.0251,0.0168,0.0107
+Demographics+Acoustic,alphaRatioV_sma3nz_stddevNorm,6,Spectral,0.0527,0.477,0.0183,0.0236,0.0218
+Demographics+Acoustic,shimmerLocaldB_sma3nz_stddevNorm,7,Voice quality,0.0346,0.4151,0.0226,0.0397,0.0171
+Demographics+Acoustic,mfcc3V_sma3nz_stddevNorm,8,Spectral,0.0246,0.2761,0.0532,0.042,0.0449
+Demographics+Acoustic,mfcc3_sma3_amean,9,Spectral,0.0167,0.2469,-0.0351,0.0088,0.0069
+Demographics+Acoustic,equivalentSoundLevel_dBp,10,Loudness/Energy,0.0236,0.1889,-0.0564,-0.0029,0.0105
+Demographics+Acoustic,spectralFluxUV_sma3nz_amean,11,Spectral,0.0211,0.1871,0.0455,-0.0098,0.0146
+Demographics+Acoustic,age,12,Demographics,0.0119,0.1738,-0.001,0.0026,0.0057
+Demographics+Acoustic,slopeV500-1500_sma3nz_amean,13,Spectral,0.0165,0.1405,-0.0201,0.0022,0.0063
+Demographics+Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,14,Voice quality,0.0207,0.1386,-0.0186,0.0028,0.0079
+Demographics+Acoustic,mfcc2V_sma3nz_amean,15,Spectral,0.0071,0.1282,-0.0122,-0.0004,0.0081
+Demographics+Acoustic,mfcc3V_sma3nz_amean,16,Spectral,0.0118,0.1266,-0.0084,-0.0177,0.0099
+Demographics+Acoustic,loudness_sma3_stddevNorm,17,Loudness/Energy,0.0178,0.1135,0.0111,-0.0081,0.0186
+Demographics+Acoustic,mfcc1_sma3_stddevNorm,18,Spectral,0.0129,0.1108,-0.0067,0.0037,0.0041
+Demographics+Acoustic,F1amplitudeLogRelF0_sma3nz_amean,19,Formants,0.011,0.1067,0.0106,-0.0143,0.0209
+Demographics+Acoustic,spectralFlux_sma3_stddevNorm,20,Spectral,0.0117,0.1015,0.0124,0.0043,0.0044
+Demographics+Acoustic,mfcc2_sma3_stddevNorm,21,Spectral,0.0091,0.0931,0.0329,-0.0308,0.009
+Demographics+Acoustic,mfcc4_sma3_stddevNorm,22,Spectral,0.0096,0.0879,0.0207,-0.0026,0.0024
+Demographics+Acoustic,F3bandwidth_sma3nz_amean,23,Formants,0.0095,0.0855,0.0044,0.0117,0.0207
+Demographics+Acoustic,mfcc2V_sma3nz_stddevNorm,24,Spectral,0.0087,0.0837,0.0288,-0.0061,0.0046
+Demographics+Acoustic,logRelF0-H1-H2_sma3nz_amean,25,Voice quality,0.0098,0.0837,0.0001,0.0039,0.0305
+Demographics+Acoustic,F3bandwidth_sma3nz_stddevNorm,26,Formants,0.0095,0.0819,-0.02,0.0023,0.0096
+Demographics+Acoustic,mfcc4V_sma3nz_stddevNorm,27,Spectral,0.0111,0.0773,-0.0122,0.0045,0.003
+Demographics+Acoustic,F2frequency_sma3nz_stddevNorm,28,Formants,0.0047,0.0729,0.01,-0.0139,0.02
+Demographics+Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,29,Formants,0.0072,0.0726,-0.0094,-0.0193,0.0151
+Demographics+Acoustic,slopeV0-500_sma3nz_stddevNorm,30,Spectral,0.0108,0.0725,0.0001,0.0039,0.0064
+Demographics+Acoustic,HNRdBACF_sma3nz_amean,31,Voice quality,0.0066,0.0716,-0.0011,-0.0033,0.0052
+Demographics+Acoustic,mfcc1V_sma3nz_amean,32,Spectral,0.0104,0.0653,-0.0281,0.0047,0.0035
+Demographics+Acoustic,F1bandwidth_sma3nz_stddevNorm,33,Formants,0.0085,0.0632,-0.0091,-0.005,0.0052
+Demographics+Acoustic,slopeV500-1500_sma3nz_stddevNorm,34,Spectral,0.0057,0.0603,0.0004,0.0046,0.0045
+Demographics+Acoustic,alphaRatioUV_sma3nz_amean,35,Spectral,0.0061,0.0592,-0.0004,0.0067,0.0101
+Demographics+Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,36,Pitch,0.0073,0.0555,0.0045,0.0063,0.0076
+Demographics+Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,37,Voice quality,0.0098,0.0527,-0.0025,-0.0046,0.0047
+Demographics+Acoustic,loudness_sma3_amean,38,Loudness/Energy,0.0082,0.0522,-0.0105,-0.006,0.0058
+Demographics+Acoustic,slopeUV0-500_sma3nz_amean,39,Spectral,0.0034,0.0503,-0.001,-0.0076,0.0058
+Demographics+Acoustic,StddevUnvoicedSegmentLength,40,Timing/Pauses,0.0062,0.0495,-0.0052,-0.0012,0.0012
+Demographics+Acoustic,slopeV0-500_sma3nz_amean,41,Spectral,0.0055,0.0469,-0.0039,0.0009,0.0024
+Demographics+Acoustic,F2amplitudeLogRelF0_sma3nz_amean,42,Formants,0.0039,0.0459,-0.0216,-0.0049,0.0051
+Demographics+Acoustic,VoicedSegmentsPerSec,43,Timing/Pauses,0.0052,0.0442,-0.0228,-0.0017,0.0019
+Demographics+Acoustic,mfcc1_sma3_amean,44,Spectral,0.0035,0.0438,0.0026,-0.0023,0.0027
+Demographics+Acoustic,mfcc1V_sma3nz_stddevNorm,45,Spectral,0.0073,0.0427,-0.0035,-0.0072,0.0031
+Demographics+Acoustic,mfcc2_sma3_amean,46,Spectral,0.0028,0.0414,0.0053,0.0001,0.0016
+Demographics+Acoustic,mfcc3_sma3_stddevNorm,47,Spectral,0.0041,0.0413,-0.0026,-0.0063,0.0024
+Demographics+Acoustic,F3amplitudeLogRelF0_sma3nz_amean,48,Formants,0.0038,0.0406,0.0085,-0.0096,0.0072
+Demographics+Acoustic,hammarbergIndexUV_sma3nz_amean,49,Spectral,0.0024,0.0388,0.0046,0.0005,0.0023
+Demographics+Acoustic,F3frequency_sma3nz_stddevNorm,50,Formants,0.0033,0.0367,-0.0036,-0.0108,0.0052
+Demographics+Acoustic,F1bandwidth_sma3nz_amean,51,Formants,0.0032,0.0352,-0.0071,0.0013,0.0015
+Demographics+Acoustic,MeanVoicedSegmentLengthSec,52,Timing/Pauses,0.001,0.0348,0.0068,-0.0012,0.0012
+Demographics+Acoustic,loudnessPeaksPerSec,53,Timing/Pauses,0.004,0.0345,-0.007,0.0016,0.0029
+Demographics+Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,54,Pitch,0.0033,0.0306,-0.0054,-0.0015,0.0022
+Demographics+Acoustic,mfcc4V_sma3nz_amean,55,Spectral,0.0029,0.026,0.0056,0.0,0.0046
+Demographics+Acoustic,mfcc4_sma3_amean,56,Spectral,0.0025,0.0234,-0.0023,0.0136,0.0095
+Demographics+Acoustic,spectralFluxV_sma3nz_stddevNorm,57,Spectral,0.0025,0.0203,-0.007,-0.0036,0.006
+Demographics+Acoustic,MeanUnvoicedSegmentLength,58,Timing/Pauses,0.001,0.0186,-0.0079,0.0001,0.0005
+Demographics+Acoustic,hammarbergIndexV_sma3nz_stddevNorm,59,Spectral,0.0017,0.0184,0.0106,-0.0025,0.0049
+Demographics+Acoustic,F3frequency_sma3nz_amean,60,Formants,0.0015,0.0181,0.0017,0.003,0.0022
+Demographics+Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,61,Formants,0.0012,0.0176,0.0037,-0.0068,0.0062
+Demographics+Acoustic,F2frequency_sma3nz_amean,62,Formants,0.0018,0.0173,-0.0032,-0.0012,0.0031
+Demographics+Acoustic,shimmerLocaldB_sma3nz_amean,63,Voice quality,0.0006,0.0172,-0.0022,0.0039,0.0029
+Demographics+Acoustic,jitterLocal_sma3nz_amean,64,Voice quality,0.0017,0.0168,0.0007,-0.0005,0.0049
+Demographics+Acoustic,F1frequency_sma3nz_stddevNorm,65,Formants,0.0011,0.015,-0.0018,-0.001,0.0052
+Demographics+Acoustic,F2bandwidth_sma3nz_stddevNorm,66,Formants,0.001,0.0141,-0.003,0.0004,0.0014
+Demographics+Acoustic,F1frequency_sma3nz_amean,67,Formants,0.0012,0.0138,-0.0007,0.0003,0.0013
+Demographics+Acoustic,jitterLocal_sma3nz_stddevNorm,68,Voice quality,0.0013,0.0138,-0.0098,-0.0019,0.0014
+Demographics+Acoustic,alphaRatioV_sma3nz_amean,69,Spectral,0.0007,0.0135,0.0033,0.0004,0.0017
+Demographics+Acoustic,StddevVoicedSegmentLengthSec,70,Timing/Pauses,0.0011,0.0122,-0.0054,-0.0122,0.0073
+Demographics+Acoustic,hammarbergIndexV_sma3nz_amean,71,Spectral,0.0011,0.0087,-0.0009,-0.0074,0.0064
+Demographics+Acoustic,F2amplitudeLogRelF0_sma3nz_stddevNorm,72,Formants,0.0003,0.0078,0.0049,-0.0096,0.0062
+Demographics+Acoustic,slopeUV500-1500_sma3nz_amean,73,Spectral,0.001,0.0075,-0.0007,-0.0036,0.0026
+Demographics+Acoustic,F2bandwidth_sma3nz_amean,74,Formants,0.0004,0.0066,0.0022,0.0026,0.0034
+Demographics+Acoustic,gender,75,Demographics,0.0,0.0004,-0.0001,-0.0001,0.0003
+Clinical+Acoustic,gad7,1,Clinical,0.8454,7.0741,-0.0448,1.5175,0.5604
+Clinical+Acoustic,mfcc3_sma3_amean,2,Spectral,0.0113,0.2908,-0.0245,0.0003,0.001
+Clinical+Acoustic,age,3,Demographics,0.011,0.2617,-0.0251,0.0034,0.0025
+Clinical+Acoustic,mfcc4V_sma3nz_amean,4,Spectral,0.0096,0.1594,0.0034,0.0063,0.0052
+Clinical+Acoustic,mfcc2V_sma3nz_amean,5,Spectral,0.0045,0.1088,0.0012,0.0016,0.0026
+Clinical+Acoustic,mfcc2V_sma3nz_stddevNorm,6,Spectral,0.0083,0.0938,0.0159,-0.0028,0.0023
+Clinical+Acoustic,F2frequency_sma3nz_stddevNorm,7,Formants,0.0031,0.0835,0.0086,0.0006,0.0006
+Clinical+Acoustic,alphaRatioUV_sma3nz_amean,8,Spectral,0.0047,0.0788,-0.023,0.0023,0.0018
+Clinical+Acoustic,mfcc1_sma3_stddevNorm,9,Spectral,0.007,0.0694,0.0069,0.001,0.0012
+Clinical+Acoustic,LES,10,Clinical,0.0039,0.0687,0.0227,0.0055,0.0045
+Clinical+Acoustic,hammarbergIndexUV_sma3nz_amean,11,Spectral,0.0039,0.0559,-0.0026,0.0001,0.001
+Clinical+Acoustic,spectralFluxV_sma3nz_stddevNorm,12,Spectral,0.0028,0.0478,-0.0061,-0.0032,0.0026
+Clinical+Acoustic,spectralFlux_sma3_stddevNorm,13,Spectral,0.0055,0.0472,-0.0014,-0.0027,0.0057
+Clinical+Acoustic,ctq_sf,14,Clinical,0.0016,0.0471,0.0012,0.0012,0.0005
+Clinical+Acoustic,slopeV500-1500_sma3nz_stddevNorm,15,Spectral,0.0017,0.0465,-0.002,0.001,0.001
+Clinical+Acoustic,logRelF0-H1-A3_sma3nz_stddevNorm,16,Voice quality,0.0045,0.0456,-0.001,-0.0005,0.002
+Clinical+Acoustic,mfcc3V_sma3nz_stddevNorm,17,Spectral,0.0037,0.0449,0.008,-0.0033,0.0035
+Clinical+Acoustic,SSRS,18,Clinical,0.003,0.0442,-0.0247,-0.0006,0.0009
+Clinical+Acoustic,spectralFlux_sma3_amean,19,Spectral,0.0024,0.0384,-0.0116,-0.0022,0.0013
+Clinical+Acoustic,mfcc4_sma3_stddevNorm,20,Spectral,0.0024,0.0382,0.0023,0.0054,0.0041
+Clinical+Acoustic,F0semitoneFrom27.5Hz_sma3nz_amean,21,Pitch,0.0031,0.038,-0.0166,-0.0011,0.002
+Clinical+Acoustic,shimmerLocaldB_sma3nz_stddevNorm,22,Voice quality,0.0021,0.0373,-0.0048,-0.001,0.0009
+Clinical+Acoustic,F2bandwidth_sma3nz_stddevNorm,23,Formants,0.0015,0.0373,-0.0101,0.0002,0.0001
+Clinical+Acoustic,mfcc4V_sma3nz_stddevNorm,24,Spectral,0.0021,0.0357,0.0024,0.001,0.0009
+Clinical+Acoustic,slopeUV0-500_sma3nz_amean,25,Spectral,0.0022,0.0354,-0.0085,-0.0001,0.0004
+Clinical+Acoustic,spectralFluxV_sma3nz_amean,26,Spectral,0.0025,0.0345,0.006,-0.0008,0.0007
+Clinical+Acoustic,logRelF0-H1-H2_sma3nz_stddevNorm,27,Voice quality,0.0015,0.0322,-0.0027,0.0001,0.0017
+Clinical+Acoustic,StddevUnvoicedSegmentLength,28,Timing/Pauses,0.0038,0.0284,0.0053,-0.0001,0.0002
+Clinical+Acoustic,mfcc1V_sma3nz_amean,29,Spectral,0.0025,0.0275,-0.0055,-0.002,0.0016
+Clinical+Acoustic,MeanVoicedSegmentLengthSec,30,Timing/Pauses,0.0007,0.027,-0.0002,-0.0005,0.0009
+Clinical+Acoustic,mfcc4_sma3_amean,31,Spectral,0.0019,0.0259,0.0001,-0.0004,0.0002
+Clinical+Acoustic,F1frequency_sma3nz_stddevNorm,32,Formants,0.0012,0.025,0.0036,0.0005,0.0019
+Clinical+Acoustic,F1bandwidth_sma3nz_amean,33,Formants,0.0008,0.024,0.0005,-0.0,0.0009
+Clinical+Acoustic,HNRdBACF_sma3nz_amean,34,Voice quality,0.0022,0.0239,-0.004,-0.0006,0.0009
+Clinical+Acoustic,education_years,35,Demographics,0.0013,0.0227,-0.0059,0.0005,0.0004
+Clinical+Acoustic,F3bandwidth_sma3nz_amean,36,Formants,0.0018,0.0221,-0.0015,-0.0004,0.0003
+Clinical+Acoustic,mfcc1_sma3_amean,37,Spectral,0.0006,0.0206,-0.0015,-0.0008,0.0011
+Clinical+Acoustic,F1amplitudeLogRelF0_sma3nz_stddevNorm,38,Formants,0.0007,0.0206,-0.0044,0.0002,0.0002
+Clinical+Acoustic,slopeV500-1500_sma3nz_amean,39,Spectral,0.0008,0.0205,-0.0037,-0.0002,0.0002
+Clinical+Acoustic,equivalentSoundLevel_dBp,40,Loudness/Energy,0.001,0.0201,-0.0058,-0.001,0.0005
+Clinical+Acoustic,mfcc3_sma3_stddevNorm,41,Spectral,0.001,0.0185,-0.0025,0.0003,0.0002
+Clinical+Acoustic,StddevVoicedSegmentLengthSec,42,Timing/Pauses,0.0012,0.0181,0.0037,0.0001,0.0004
+Clinical+Acoustic,mfcc3V_sma3nz_amean,43,Spectral,0.0018,0.0177,-0.0063,-0.0004,0.0005
+Clinical+Acoustic,F0semitoneFrom27.5Hz_sma3nz_stddevNorm,44,Pitch,0.0007,0.0163,0.0042,0.0006,0.001
+Clinical+Acoustic,slopeV0-500_sma3nz_amean,45,Spectral,0.0007,0.0157,0.0014,-0.0001,0.0003
+Clinical+Acoustic,alphaRatioV_sma3nz_amean,46,Spectral,0.0004,0.0151,-0.0025,0.0005,0.0003
+Clinical+Acoustic,mfcc2_sma3_amean,47,Spectral,0.0019,0.0147,-0.0052,0.0009,0.0005
+Clinical+Acoustic,F1bandwidth_sma3nz_stddevNorm,48,Formants,0.0009,0.0146,-0.0066,-0.0011,0.0006
+Clinical+Acoustic,F3frequency_sma3nz_amean,49,Formants,0.0006,0.0145,-0.008,0.0006,0.0002
+Clinical+Acoustic,hammarbergIndexV_sma3nz_stddevNorm,50,Spectral,0.0004,0.0132,-0.0005,-0.0005,0.0004
+Clinical+Acoustic,F3bandwidth_sma3nz_stddevNorm,51,Formants,0.0005,0.0129,0.0023,0.0013,0.0009
+Clinical+Acoustic,loudness_sma3_stddevNorm,52,Loudness/Energy,0.001,0.0129,-0.0041,-0.0012,0.0011
+Clinical+Acoustic,alphaRatioV_sma3nz_stddevNorm,53,Spectral,0.0011,0.0128,0.001,0.0003,0.0002
+Clinical+Acoustic,spectralFluxUV_sma3nz_amean,54,Spectral,0.0009,0.0123,-0.0076,-0.0019,0.0008
+Clinical+Acoustic,mfcc1V_sma3nz_stddevNorm,55,Spectral,0.0005,0.012,-0.0004,-0.0008,0.0005
+Clinical+Acoustic,F2bandwidth_sma3nz_amean,56,Formants,0.0009,0.0116,-0.0016,0.0002,0.0004
+Clinical+Acoustic,HNRdBACF_sma3nz_stddevNorm,57,Voice quality,0.0004,0.0112,-0.0055,0.0003,0.0007
 Clinical+Acoustic,logRelF0-H1-H2_sma3nz_amean,58,Voice quality,0.0007,0.0111,0.0054,-0.0004,0.0003
-Clinical+Acoustic,jitterLocal_sma3nz_amean,59,Voice quality,0.0014,0.0111,0.0075,-0.0019,0.0008
-Clinical+Acoustic,slopeUV500-1500_sma3nz_amean,60,Spectral,0.0004,0.0108,-0.0002,0.0001,0.0001
-Clinical+Acoustic,logRelF0-H1-A3_sma3nz_amean,61,Voice quality,0.003,0.0107,-0.0061,-0.0007,0.001
-Clinical+Acoustic,slopeV0-500_sma3nz_stddevNorm,62,Spectral,0.0026,0.0106,0.0044,-0.0007,0.0006
-Clinical+Acoustic,jitterLocal_sma3nz_stddevNorm,63,Voice quality,0.001,0.0106,0.0019,0.0002,0.0006
-Clinical+Acoustic,F2amplitudeLogRelF0_sma3nz_amean,64,Formants,0.0011,0.0105,-0.0018,-0.0002,0.0004
-Clinical+Acoustic,shimmerLocaldB_sma3nz_amean,65,Voice quality,0.0004,0.0103,-0.0043,-0.0002,0.0003
-Clinical+Acoustic,MeanUnvoicedSegmentLength,66,Timing/Pauses,0.0007,0.0101,0.0039,-0.0003,0.0005
-Clinical+Acoustic,mfcc2_sma3_stddevNorm,67,Spectral,0.0008,0.0099,0.001,0.0001,0.0003
+Clinical+Acoustic,jitterLocal_sma3nz_amean,59,Voice quality,0.0012,0.0111,0.0075,-0.0019,0.0008
+Clinical+Acoustic,slopeUV500-1500_sma3nz_amean,60,Spectral,0.0006,0.0108,-0.0002,0.0001,0.0001
+Clinical+Acoustic,logRelF0-H1-A3_sma3nz_amean,61,Voice quality,0.0004,0.0107,-0.0061,-0.0007,0.001
+Clinical+Acoustic,slopeV0-500_sma3nz_stddevNorm,62,Spectral,0.0006,0.0106,0.0044,-0.0007,0.0006
+Clinical+Acoustic,jitterLocal_sma3nz_stddevNorm,63,Voice quality,0.0005,0.0106,0.0019,0.0002,0.0006
+Clinical+Acoustic,F2amplitudeLogRelF0_sma3nz_amean,64,Formants,0.0006,0.0105,-0.0018,-0.0002,0.0004
+Clinical+Acoustic,shimmerLocaldB_sma3nz_amean,65,Voice quality,0.0008,0.0103,-0.0043,-0.0002,0.0003
+Clinical+Acoustic,MeanUnvoicedSegmentLength,66,Timing/Pauses,0.0003,0.0101,0.0039,-0.0003,0.0005
+Clinical+Acoustic,mfcc2_sma3_stddevNorm,67,Spectral,0.0005,0.0099,0.001,0.0001,0.0003
 Clinical+Acoustic,F2amplitudeLogRelF0_sma3nz_stddevNorm,68,Formants,0.0005,0.0099,0.0009,0.0002,0.0004
 Clinical+Acoustic,hammarbergIndexV_sma3nz_amean,69,Spectral,0.0005,0.0096,-0.0004,0.0013,0.0004
-Clinical+Acoustic,VoicedSegmentsPerSec,70,Timing/Pauses,0.0019,0.0095,0.0014,-0.0001,0.0005
-Clinical+Acoustic,F3frequency_sma3nz_stddevNorm,71,Formants,0.0007,0.0091,-0.0018,-0.0006,0.0003
-Clinical+Acoustic,F1amplitudeLogRelF0_sma3nz_amean,72,Formants,0.0004,0.0088,0.004,0.0001,0.0002
-Clinical+Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,73,Formants,0.0004,0.0087,-0.0013,-0.0006,0.0003
-Clinical+Acoustic,loudness_sma3_amean,74,Loudness/Energy,0.0031,0.0074,0.0007,-0.0019,0.001
-Clinical+Acoustic,loudnessPeaksPerSec,75,Timing/Pauses,0.0019,0.0073,0.0021,-0.001,0.001
-Clinical+Acoustic,F1frequency_sma3nz_amean,76,Formants,0.0002,0.0064,0.0026,-0.0002,0.0002
-Clinical+Acoustic,F2frequency_sma3nz_amean,77,Formants,0.0006,0.0061,-0.001,-0.0002,0.0003
-Clinical+Acoustic,F3amplitudeLogRelF0_sma3nz_amean,78,Formants,0.0007,0.005,-0.0026,-0.0006,0.0004
+Clinical+Acoustic,VoicedSegmentsPerSec,70,Timing/Pauses,0.0002,0.0095,0.0014,-0.0001,0.0005
+Clinical+Acoustic,F3frequency_sma3nz_stddevNorm,71,Formants,0.0005,0.0091,-0.0018,-0.0006,0.0003
+Clinical+Acoustic,F1amplitudeLogRelF0_sma3nz_amean,72,Formants,0.0005,0.0088,0.004,0.0001,0.0002
+Clinical+Acoustic,F3amplitudeLogRelF0_sma3nz_stddevNorm,73,Formants,0.0006,0.0087,-0.0013,-0.0006,0.0003
+Clinical+Acoustic,loudness_sma3_amean,74,Loudness/Energy,0.0005,0.0074,0.0007,-0.0019,0.001
+Clinical+Acoustic,loudnessPeaksPerSec,75,Timing/Pauses,0.0003,0.0073,0.0021,-0.001,0.001
+Clinical+Acoustic,F1frequency_sma3nz_amean,76,Formants,0.0003,0.0064,0.0026,-0.0002,0.0002
+Clinical+Acoustic,F2frequency_sma3nz_amean,77,Formants,0.0003,0.0061,-0.001,-0.0002,0.0003
+Clinical+Acoustic,F3amplitudeLogRelF0_sma3nz_amean,78,Formants,0.0002,0.005,-0.0026,-0.0006,0.0004
 Clinical+Acoustic,gender,79,Demographics,0.0001,0.0027,-0.001,0.0003,0.0001

@@ -3,7 +3,7 @@
 #
 # Conda users: environment.yml pins the same set. Keep the two in sync.
 # Not covered here: openSMILE 3.0, a standalone binary bundled under
-# audio_lanzhou_2015/tools/ (or pointed at via the OPENSMILE_ROOT env var).
+# project/tools/ (or pointed at via the OPENSMILE_ROOT env var).
 
 pandas>=2.2.2
 numpy>=2.2.6

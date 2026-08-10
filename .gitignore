@@ -5,20 +5,20 @@
 *.m4a
 
 # source data: raw + derived audio trees and the MODMA metadata sheet
-audio_lanzhou_2015/input/
+project/input/
 
 # MODMA EULA forbids redistributing the dataset or portions of it. These derived
 # tables hold one row per subject with their diagnosis, PHQ-9 and questionnaire
 # scores, so they stay local. Aggregate results (summaries, importances, metric
 # tables) carry no per-subject records and remain tracked.
-audio_lanzhou_2015/output/csv/model_df.csv
-audio_lanzhou_2015/output/csv/wav_inventory.csv
-audio_lanzhou_2015/output/csv/wav_inventory_cleaned.csv
-audio_lanzhou_2015/output/csv/egemaps_features.csv
-audio_lanzhou_2015/output/csv/egemaps_features_noisy.csv
-audio_lanzhou_2015/output/csv/egemaps_audio_*.csv
-audio_lanzhou_2015/output/csv/predictions_*.csv
-audio_lanzhou_2015/output/csv/shap_*_full.csv
+project/output/csv/model_df.csv
+project/output/csv/wav_inventory.csv
+project/output/csv/wav_inventory_cleaned.csv
+project/output/csv/egemaps_features.csv
+project/output/csv/egemaps_features_noisy.csv
+project/output/csv/egemaps_audio_*.csv
+project/output/csv/predictions_*.csv
+project/output/csv/shap_*_full.csv
 
 
 # large binaries

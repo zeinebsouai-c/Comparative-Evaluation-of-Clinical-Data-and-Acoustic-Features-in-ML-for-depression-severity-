@@ -2,7 +2,7 @@
 #
 #   conda env create -f environment.yml
 #   conda activate depression-severity
-#   python audio_lanzhou_2015/scripts/project_paths.py     # verify paths resolve
+#   python project/scripts/project_paths.py     # verify paths resolve
 #
 # Versions are the ones the analysis was last run and verified with. conda-forge
 # is used for everything: it carries current builds of librosa, shap and
@@ -44,4 +44,4 @@ dependencies:
   - nbformat=5.10.*
 
 # NOT managed here: openSMILE 3.0, which is a standalone binary bundled under
-# audio_lanzhou_2015/tools/ (or pointed at via the OPENSMILE_ROOT env var).
+# project/tools/ (or pointed at via the OPENSMILE_ROOT env var).

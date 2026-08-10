@@ -36,7 +36,7 @@ requires signing an End User License Agreement. Once you have it, place the file
 as:
 
 ```
-audio_lanzhou_2015/input/
+project/input/
     subjects_information_audio_lanzhou_2015.xlsx
     audio_lanzhou_2015_og/
         02010001/  02010002/  ...        one folder per subject
@@ -76,14 +76,14 @@ pip install -r requirements.txt
 Then check every path resolves:
 
 ```bash
-python audio_lanzhou_2015/scripts/project_paths.py    # prints each path, [x] = present
-python audio_lanzhou_2015/scripts/project_config.py   # prints the feature-set sizes
+python project/scripts/project_paths.py    # prints each path, [x] = present
+python project/scripts/project_config.py   # prints the feature-set sizes
 ```
 
 ## Layout
 
 ```
-audio_lanzhou_2015/
+project/
 ├── input/                  everything the pipeline reads (not in git)
 │   ├── audio_lanzhou_2015_og/          raw subject folders
 │   ├── audio_lanzhou_2015_resampled/   16 kHz mono, generated
@@ -123,8 +123,8 @@ run in any order.
 openSMILE runs in a terminal at that point, then the notebook continues.
 
 ```powershell
-& "audio_lanzhou_2015/scripts/extract_egemaps.ps1"                    # clean audio
-& "audio_lanzhou_2015/scripts/extract_all_conditions.ps1"             # robustness conditions
+& "project/scripts/extract_egemaps.ps1"                    # clean audio
+& "project/scripts/extract_all_conditions.ps1"             # robustness conditions
 ```
 
 Both derive every path from their own location and are resumable. Rerunning
@@ -140,7 +140,7 @@ rather than writing path literals; add a new constant there if one is missing.
 To keep the dataset or openSMILE outside the repository:
 
 ```
-MODMA_DATA_DIR=/path/to/audio_lanzhou_2015
+MODMA_DATA_DIR=/path/to/project
 OPENSMILE_ROOT=/path/to/opensmile-3.0-win-x64
 ```
 

@@ -1,0 +1,9 @@
+modality,perturbation,R2_orig,R2_pert,R2_deg_%,MAE_orig,MAE_pert,MAE_deg_%,exceeds_noise
+Demographics,drop 'age',0.188,0.183,2.3,5.964,5.899,-1.1,False
+Demographics,30% missing,0.188,0.054,71.4,5.964,6.427,7.8,True
+Psych,drop 'gad7',0.778,0.155,80.1,2.622,6.124,133.5,True
+Psych,30% missing,0.778,0.451,42.0,2.622,4.369,66.6,True
+Clinical,drop 'gad7',0.764,0.338,55.8,2.66,5.319,100.0,True
+Clinical,30% missing,0.764,0.578,24.4,2.66,3.914,47.2,True
+Acoustic,drop 10 recordings,0.228,0.145,36.4,6.282,6.718,6.9,True
+Acoustic,noise (SNR),0.228,0.173,24.2,6.282,6.512,3.7,True

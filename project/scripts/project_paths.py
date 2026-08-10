@@ -8,7 +8,7 @@ on any machine or OS.
 Assumed layout (this file lives in <data_root>/scripts/):
 
     <repo_root>/
-        audio_lanzhou_2015/          <- DATA_DIR
+        project/          <- DATA_DIR
             input/                   <- INPUT_DIR: everything the pipeline reads
                 subjects_information_audio_lanzhou_2015.xlsx
                 audio_lanzhou_2015_og/       <- RAW_AUDIO_DIR: 02010001/ 02010002/ ...
@@ -49,8 +49,8 @@ __all__ = [
 # ---------------------------------------------------------------------------
 # Roots
 # ---------------------------------------------------------------------------
-SCRIPTS_DIR = Path(__file__).resolve().parent           # .../audio_lanzhou_2015/scripts
-DATA_DIR = SCRIPTS_DIR.parent                           # .../audio_lanzhou_2015
+SCRIPTS_DIR = Path(__file__).resolve().parent           # .../project/scripts
+DATA_DIR = SCRIPTS_DIR.parent                           # .../project
 REPO_ROOT = DATA_DIR.parent
 
 _env_data = os.environ.get("MODMA_DATA_DIR")
